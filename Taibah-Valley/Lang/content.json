@@ -1,0 +1,134 @@
+{
+  "en": {
+    "lang": "en",
+    "dir": "ltr",
+    "meta": {
+      "title": "Taibah Valley — Madinah's Home for Deep-Tech Innovation",
+      "description": "Taibah Valley is Madinah's innovation hub, established by Taibah University. We support startups, students, investors and partners with incubation, labs, training and a deep-tech venture pipeline.",
+      "keywords": "Taibah Valley, Madinah innovation hub, Taibah University, startups Saudi Arabia, deep tech, blockchain lab, IoT lab, AR VR lab, Vision 2030"
+    },
+    "langPill": "عربي / EN",
+    "contact": "Contact us",
+    "nav": ["Services", "The Academy", "Innovation Hub", "About", "News"],
+    "hero": {
+      "title": "In Taibah Valley we create innovative investment opportunities",
+      "sub": "For startups, students, investors and partners — Madinah's home for deep-tech innovation.",
+      "cta1": "Explore the Academy",
+      "cta2": "Our services",
+      "imageAlt": "Taibah Valley workspace and innovation campus"
+    },
+    "about": {
+      "kicker": "About the Valley",
+      "title": "Madinah's home for deep-tech innovation",
+      "body": "Established by Taibah University, Taibah Valley turns research into ventures. Founders get incubation and labs, students get training and a path into industry, and investors get access to a curated deep-tech pipeline — all in line with Saudi Vision 2030.",
+      "imageAlt": "Taibah Valley team collaborating on campus",
+      "stats": [
+        { "value": "75+", "label": "startups hosted" },
+        { "value": "1,200+", "label": "trainees graduated" },
+        { "value": "18", "label": "partners" }
+      ]
+    },
+    "services": {
+      "title": "Our services — four labs",
+      "allLink": "All services",
+      "learnMore": "Learn more",
+      "labs": [
+        { "icon": "chain", "name": "Blockchain Lab", "desc": "Smart contracts, DApps and on-chain credential authentication for institutions." },
+        { "icon": "iot", "name": "IoT Lab", "desc": "Internet-of-things prototyping and training for smart cities and industry." },
+        { "icon": "hub", "name": "Innovation Hub", "desc": "Co-working, incubation and events for Madinah's founder community." },
+        { "icon": "xr", "name": "AR/VR Creative Lab", "desc": "Immersive content and creative tooling for training and education." }
+      ]
+    },
+    "partners": {
+      "title": "Our partners",
+      "list": ["Taibah University", "Sadara", "Elm", "TheNoor", "Monsha'at", "KAUST"]
+    },
+    "news": {
+      "title": "Our latest news",
+      "allLink": "All news",
+      "items": [
+        { "date": "Nov 28, 2025", "cat": "Partnerships", "title": "Partnership signed with TheNoor to move its headquarters to Madinah" },
+        { "date": "Oct 12, 2025", "cat": "Innovation", "title": "75 projects qualify for the second stage of Taibah Innovates 4" },
+        { "date": "Sep 3, 2025", "cat": "Blockchain", "title": "New agreement to authenticate academic certificates via blockchain" },
+        { "date": "Aug 14, 2025", "cat": "Academy", "title": "Academy opens registration for the fall AI bootcamp cohort" }
+      ]
+    },
+    "footer": {
+      "blurb": "Madinah's innovation hub — supporting startups, research, investment and digital transformation. Taibah University, Building 132, Madinah.",
+      "servicesTitle": "Services",
+      "valleyTitle": "Valley",
+      "contactTitle": "Contact",
+      "footerLabs": ["Blockchain Lab", "IoT Lab", "Innovation Hub", "AR/VR Lab"],
+      "footerValley": ["About", "The Academy", "News", "Partners"],
+      "email": "info@taibahvalley.com.sa",
+      "phone": "+966 14 861 8888",
+      "copyright": "© 2026 Taibah Valley. All rights reserved."
+    }
+  },
+  "ar": {
+    "lang": "ar",
+    "dir": "rtl",
+    "meta": {
+      "title": "وادي طيبة — موطن الابتكار التقني العميق في المدينة المنورة",
+      "description": "وادي طيبة هو مركز الابتكار في المدينة المنورة، أسسته جامعة طيبة. ندعم الشركات الناشئة والطلاب والمستثمرين والشركاء عبر الاحتضان والمختبرات والتدريب ومحفظة مشاريع تقنية عميقة.",
+      "keywords": "وادي طيبة, مركز الابتكار المدينة المنورة, جامعة طيبة, الشركات الناشئة السعودية, التقنية العميقة, مختبر البلوك تشين, مختبر إنترنت الأشياء, مختبر الواقع الممتد, رؤية 2030"
+    },
+    "langPill": "EN / عربي",
+    "contact": "تواصل معنا",
+    "nav": ["الخدمات", "الأكاديمية", "مركز الابتكار", "عن الوادي", "الأخبار"],
+    "hero": {
+      "title": "في وادي طيبة نصنع فرصاً استثمارية مبتكرة",
+      "sub": "للشركات الناشئة والطلاب والمستثمرين والشركاء — موطن الابتكار التقني العميق في المدينة المنورة.",
+      "cta1": "استكشف الأكاديمية",
+      "cta2": "خدماتنا",
+      "imageAlt": "مساحة عمل وحرم وادي طيبة للابتكار"
+    },
+    "about": {
+      "kicker": "عن الوادي",
+      "title": "موطن الابتكار التقني العميق في المدينة",
+      "body": "أسست جامعة طيبة وادي طيبة لتحويل البحث إلى مشاريع. يحصل المؤسسون على الاحتضان والمختبرات، والطلاب على التدريب ومسار نحو سوق العمل، والمستثمرون على محفظة تقنية منتقاة — بما يتماشى مع رؤية السعودية 2030.",
+      "imageAlt": "فريق وادي طيبة يعمل معاً في الحرم",
+      "stats": [
+        { "value": "75+", "label": "شركة ناشئة محتضنة" },
+        { "value": "1,200+", "label": "متدرب متخرج" },
+        { "value": "18", "label": "شريكاً" }
+      ]
+    },
+    "services": {
+      "title": "خدماتنا — أربعة مختبرات",
+      "allLink": "جميع الخدمات",
+      "learnMore": "اعرف المزيد",
+      "labs": [
+        { "icon": "chain", "name": "مختبر البلوك تشين", "desc": "العقود الذكية والتطبيقات اللامركزية وتوثيق الشهادات على السلسلة للمؤسسات." },
+        { "icon": "iot", "name": "مختبر إنترنت الأشياء", "desc": "النمذجة والتدريب في إنترنت الأشياء للمدن الذكية والصناعة." },
+        { "icon": "hub", "name": "مركز الابتكار", "desc": "مساحات عمل مشتركة واحتضان وفعاليات لمجتمع روّاد الأعمال بالمدينة." },
+        { "icon": "xr", "name": "مختبر الواقع الممتد", "desc": "محتوى غامر وأدوات إبداعية للتدريب والتعليم." }
+      ]
+    },
+    "partners": {
+      "title": "شركاؤنا",
+      "list": ["جامعة طيبة", "سدارة", "علم", "TheNoor", "منشآت", "كاوست"]
+    },
+    "news": {
+      "title": "آخر أخبارنا",
+      "allLink": "جميع الأخبار",
+      "items": [
+        { "date": "٢٨ نوفمبر ٢٠٢٥", "cat": "شراكات", "title": "توقيع شراكة مع TheNoor لنقل مقرها إلى المدينة المنورة" },
+        { "date": "١٢ أكتوبر ٢٠٢٥", "cat": "ابتكار", "title": "تأهل 75 مشروعاً للمرحلة الثانية من مسابقة طيبة تبتكر 4" },
+        { "date": "٣ سبتمبر ٢٠٢٥", "cat": "بلوك تشين", "title": "اتفاقية جديدة لتوثيق الشهادات الأكاديمية عبر البلوك تشين" },
+        { "date": "١٤ أغسطس ٢٠٢٥", "cat": "الأكاديمية", "title": "الأكاديمية تفتح التسجيل لدفعة خريف معسكر الذكاء الاصطناعي" }
+      ]
+    },
+    "footer": {
+      "blurb": "مركز الابتكار في المدينة المنورة — يدعم الشركات الناشئة والبحث والاستثمار والتحول الرقمي. جامعة طيبة، مبنى 132.",
+      "servicesTitle": "الخدمات",
+      "valleyTitle": "الوادي",
+      "contactTitle": "تواصل",
+      "footerLabs": ["مختبر البلوك تشين", "مختبر إنترنت الأشياء", "مركز الابتكار", "مختبر الواقع الممتد"],
+      "footerValley": ["عن الوادي", "الأكاديمية", "الأخبار", "الشركاء"],
+      "email": "info@taibahvalley.com.sa",
+      "phone": "+966 14 861 8888",
+      "copyright": "© 2026 وادي طيبة. جميع الحقوق محفوظة."
+    }
+  }
+}
