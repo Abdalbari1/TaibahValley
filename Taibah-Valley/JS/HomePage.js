@@ -1,6 +1,6 @@
 /**
  * Taibah Valley — site behavior.
- * Loads bilingual content from Lang/content.json and renders it with safe
+ * Loads bilingual content from data/content.json and renders it with safe
  * DOM APIs (textContent / attribute setters) — never innerHTML on fetched data.
  */
 (function () {
@@ -11,10 +11,11 @@
     iot: '<path d="M128,88a40,40,0,1,0,40,40A40,40,0,0,0,128,88Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,152ZM77.65,77.66a8,8,0,0,1,0,11.31,56,56,0,0,0,0,79.2,8,8,0,1,1-11.32,11.31,72,72,0,0,1,0-101.82A8,8,0,0,1,77.65,77.66Zm112,-11.32a72,72,0,0,1,0,101.82,8,8,0,1,1-11.31-11.31,56,56,0,0,0,0-79.2,8,8,0,0,1,11.31-11.31ZM43.72,43.72a8,8,0,0,1,0,11.32,104,104,0,0,0,0,145.92,8,8,0,1,1-11.44,11.2,120,120,0,0,1,0-168.32A8,8,0,0,1,43.72,43.72Zm180,-.08a120,120,0,0,1,0,168.32,8,8,0,1,1-11.44-11.2,104,104,0,0,0,0-145.92,8,8,0,0,1,11.44-11.2Z"/>',
     hub: '<path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.5C39.74,56.83,78.26,17.15,125.88,16A88,88,0,0,1,216,104Zm-16,0a72,72,0,0,0-73.74-72c-39,.92-70.47,33.39-70.26,72.39a71.65,71.65,0,0,0,27.64,56.3A32,32,0,0,1,96,186v6h64v-6a32.15,32.15,0,0,1,12.47-25.35A71.65,71.65,0,0,0,200,104Zm-16.11-9.34a57.6,57.6,0,0,0-46.56-46.55,8,8,0,0,0-2.66,15.78c16.57,2.79,30.63,16.85,33.44,33.45A8,8,0,0,0,176,104a9,9,0,0,0,1.35-.11A8,8,0,0,0,183.89,94.66Z"/>',
     xr: '<path d="M247.44,173.75a.68.68,0,0,0,0-.14L231.05,89.44c0-.06,0-.12,0-.18A60.08,60.08,0,0,0,172,40H84A60.08,60.08,0,0,0,25,89.26c0,.06,0,.12,0,.18L8.59,173.61a.68.68,0,0,0,0,.14,36,36,0,0,0,60.55,31.32l.09-.09L109.19,160h37.62l40,44.98.09.09a36,36,0,0,0,60.54-31.32ZM104,112H88v16a8,8,0,0,1-16,0V112H56a8,8,0,0,1,0-16H72V80a8,8,0,0,1,16,0V96h16a8,8,0,0,1,0,16Zm40-8a12,12,0,1,1,12,12A12,12,0,0,1,144,104Zm44,28a12,12,0,1,1,12-12A12,12,0,0,1,188,132Z"/>',
+    ai: '<rect x="92" y="92" width="72" height="72" rx="8" fill="none" stroke="currentColor" stroke-width="12"/><g stroke="currentColor" stroke-width="10" stroke-linecap="round"><line x1="128" y1="24" x2="128" y2="60"/><line x1="128" y1="196" x2="128" y2="232"/><line x1="24" y1="128" x2="60" y2="128"/><line x1="196" y1="128" x2="232" y2="128"/><line x1="64" y1="64" x2="88" y2="88"/><line x1="168" y1="168" x2="192" y2="192"/><line x1="192" y1="64" x2="168" y2="88"/><line x1="88" y1="168" x2="64" y2="192"/></g><circle cx="128" cy="128" r="18" fill="currentColor"/>',
   };
 
-  const HERO_IMAGE = "../Images/----mrrvkhhg-q65o.webp";
-  const ABOUT_IMAGE = "../Images/--mrrvn1bu-v842.jpg";
+  const HERO_IMAGE = "----mrrvkhhg-q65o.webp";
+  const ABOUT_IMAGE = "--mrrvn1bu-v842.jpg";
 
   const THEME_KEY = "tv-theme";
   const LANG_KEY = "tv-lang";
@@ -28,6 +29,59 @@
       path +
       "</svg>"
     );
+  }
+
+  /** Only allow a plain filename (no path traversal, no other folders) for lab logo images. */
+  const SAFE_IMAGE_NAME = /^[\w.\- ]+\.(png|jpg|jpeg|webp|svg)$/i;
+  function isSafeImageName(name) {
+    return typeof name === "string" && SAFE_IMAGE_NAME.test(name) && !name.includes("..");
+  }
+
+  function buildLabMedia(lab) {
+    if (isSafeImageName(lab.image)) {
+      return el("img", {
+        attrs: {
+          src: "assets/" + lab.image,
+          alt: lab.name + " logo",
+          loading: "lazy",
+        },
+      });
+    }
+    const iconWrap = el("div");
+    iconWrap.innerHTML = iconSvg(lab.icon); // safe: only allowlisted static markup from ICONS
+    return iconWrap.firstChild || iconWrap;
+  }
+
+  function buildPartnerTile(partner) {
+    const hasImage = isSafeImageName(partner.image);
+    const li = el("li", { className: hasImage ? "partner-tile partner-tile--photo" : "partner-tile" });
+    if (hasImage) {
+      li.appendChild(
+        el("img", {
+          attrs: {
+            src: "assets/" + partner.image,
+            alt: partner.name + " logo",
+            loading: "lazy",
+          },
+        })
+      );
+    } else {
+      li.textContent = partner.name;
+    }
+    return li;
+  }
+
+  /** Renders a static logo grid (used by both Partners and Clients) — every
+   * logo visible at once, wrapping to as many rows as needed. */
+  function renderLogoGrid(section, titleId, gridId) {
+    const titleEl = document.getElementById(titleId);
+    const grid = document.getElementById(gridId);
+    if (!section || !titleEl || !grid) return;
+    titleEl.textContent = section.title;
+    clear(grid);
+    section.list.forEach((entry) => {
+      grid.appendChild(buildPartnerTile(entry));
+    });
   }
 
   function el(tag, opts) {
@@ -105,6 +159,7 @@
     document.getElementById("lang-pill").textContent = t.langPill;
     document.getElementById("lang-pill-footer").textContent = t.langPill;
     document.getElementById("contact-btn").textContent = t.contact;
+    document.getElementById("login-btn").textContent = t.login;
 
     // Hero
     document.getElementById("hero-title").textContent = t.hero.title;
@@ -140,8 +195,9 @@
     clear(labsGrid);
     t.services.labs.forEach((lab) => {
       const card = el("article", { className: "lab-card" });
-      const iconWrap = el("div", { className: "lab-icon" });
-      iconWrap.innerHTML = iconSvg(lab.icon); // safe: only allowlisted static markup from ICONS
+      const iconClass = isSafeImageName(lab.image) ? "lab-icon lab-icon--photo" : "lab-icon";
+      const iconWrap = el("div", { className: iconClass });
+      iconWrap.appendChild(buildLabMedia(lab));
       card.appendChild(iconWrap);
       const body = el("div", { className: "lab-body" });
       body.appendChild(el("h3", { text: lab.name }));
@@ -156,14 +212,9 @@
       labsGrid.appendChild(card);
     });
 
-    // Partners
-    document.getElementById("partners-title").textContent = t.partners.title;
-    const partnersGrid = document.getElementById("partners-grid");
-    clear(partnersGrid);
-    t.partners.list.forEach((name) => {
-      const li = el("li", { className: "partner-tile", text: name });
-      partnersGrid.appendChild(li);
-    });
+    // Partners and Clients share the same logo-slider markup/behavior.
+    renderLogoGrid(t.partners, "partners-title", "partners-grid");
+    renderLogoGrid(t.clients, "clients-title", "clients-grid");
 
     // News
     document.getElementById("news-title").textContent = t.news.title;
@@ -241,7 +292,7 @@
       "@type": "Organization",
       name: t.lang === "ar" ? "وادي طيبة" : "Taibah Valley",
       url: "https://www.taibahvalley.com.sa/",
-      logo: "../Images/logo-white.png",
+      logo: "assets/logo-white.png",
       email: t.footer.email,
       telephone: t.footer.phone,
       description: t.meta.description,
@@ -252,7 +303,7 @@
   async function loadContent() {
     const status = document.getElementById("load-status");
     try {
-      const res = await fetch("../Lang/content.json", { cache: "no-store" });
+      const res = await fetch("data/content.json", { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const content = await res.json();
       if (status) status.remove();
@@ -260,7 +311,7 @@
     } catch (err) {
       if (status) {
         status.textContent =
-          "Could not load site content. If you opened this file directly, please serve it over http:// (e.g. `npx serve`) so Lang/content.json can be fetched.";
+          "Could not load site content. If you opened this file directly, please serve it over http:// (e.g. `npx serve`) so data/content.json can be fetched.";
       }
       return null;
     }

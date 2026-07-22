@@ -9,7 +9,7 @@
     },
     "langPill": "عربي / EN",
     "contact": "Contact us",
-    "nav": ["Services", "The Academy", "Innovation Hub", "About", "News"],
+    "nav": ["Valley Services", "The Academy", "Innovation Hub", "News and Event", "Store", "About Us"],
     "hero": {
       "title": "In Taibah Valley we create innovative investment opportunities",
       "sub": "For startups, students, investors and partners — Madinah's home for deep-tech innovation.",
@@ -23,25 +23,52 @@
       "body": "Established by Taibah University, Taibah Valley turns research into ventures. Founders get incubation and labs, students get training and a path into industry, and investors get access to a curated deep-tech pipeline — all in line with Saudi Vision 2030.",
       "imageAlt": "Taibah Valley team collaborating on campus",
       "stats": [
-        { "value": "75+", "label": "startups hosted" },
+        { "value": "12+", "label": "startups hosted" },
         { "value": "1,200+", "label": "trainees graduated" },
         { "value": "18", "label": "partners" }
       ]
     },
     "services": {
-      "title": "Our services — four labs",
+      "title": "Our services ",
       "allLink": "All services",
       "learnMore": "Learn more",
       "labs": [
-        { "icon": "chain", "name": "Blockchain Lab", "desc": "Smart contracts, DApps and on-chain credential authentication for institutions." },
-        { "icon": "iot", "name": "IoT Lab", "desc": "Internet-of-things prototyping and training for smart cities and industry." },
-        { "icon": "hub", "name": "Innovation Hub", "desc": "Co-working, incubation and events for Madinah's founder community." },
-        { "icon": "xr", "name": "AR/VR Creative Lab", "desc": "Immersive content and creative tooling for training and education." }
+        { "image": "BL2.png", "name": "Blockchain Lab", "desc": "Smart contracts, DApps and on-chain credential authentication for institutions." },
+        { "image": "iot1.png", "name": "IoT Lab", "desc": "Internet-of-things prototyping and training for smart cities and industry." },
+        { "image": "innovation1.png", "name": "Innovation Hub", "desc": "Co-working, incubation and events for Madinah's founder community." },
+        { "image": "ArVr1.png", "name": "AR/VR Creative Lab", "desc": "Immersive content and creative tooling for training and education." },
+        { "image": "AI1.png", "name": "Artificial Intelligence Lab", "desc": "Applied machine learning, model training and AI research for real-world industry problems." }
       ]
     },
     "partners": {
       "title": "Our partners",
-      "list": ["Taibah University", "Sadara", "Elm", "TheNoor", "Monsha'at", "KAUST"]
+      "list": [
+        { "name": "Tabadul", "image": "tabadul.png" },
+        { "name": "Sadara", "image": "sadara.png" },
+        { "name": "Elm", "image": "ELM.png" },
+        { "name": "King Abdullah University of Science and Technology", "image": "king-abdullah.png" },
+        { "name": "TBC", "image": "TBC.png" },
+        { "name": "King Fahd Security College", "image": "king.png" },
+        { "name": "King Faisal Specialist Hospital & Research Centre", "image": "fasil.png" },
+        { "name": "Ministry of Environment, Water and Agriculture", "image": "mini_e.png" },
+        { "name": "Amazon", "image": "amazon.png" },
+        { "name": "Biac", "image": "biac_logo.png" },
+        { "name": "Egy Gate", "image": "EGY.png" },
+        { "name": "Huawei", "image": "HUAWEI.png" },
+        { "name": "MISK", "image": "MISK.png" },
+        { "name": "Oracle", "image": "Oracle.png" }
+        
+      ]
+    },
+    "clients": {
+      "title": "Our clients",
+      "list": [
+        { "name": "Microsoft" },
+        { "name": "Obeikan Digital Solutions" },
+        { "name": "OceanX" },
+        { "name": "National Centre for Palms and Dates" },
+        { "name": "Saudi Space Commission" }
+      ]
     },
     "news": {
       "title": "Our latest news",
@@ -58,7 +85,7 @@
       "servicesTitle": "Services",
       "valleyTitle": "Valley",
       "contactTitle": "Contact",
-      "footerLabs": ["Blockchain Lab", "IoT Lab", "Innovation Hub", "AR/VR Lab"],
+      "footerLabs": ["Blockchain Lab", "IoT Lab", "Innovation Hub", "AR/VR Lab", "AI Lab"],
       "footerValley": ["About", "The Academy", "News", "Partners"],
       "email": "info@taibahvalley.com.sa",
       "phone": "+966 14 861 8888",
@@ -75,7 +102,7 @@
     },
     "langPill": "EN / عربي",
     "contact": "تواصل معنا",
-    "nav": ["الخدمات", "الأكاديمية", "مركز الابتكار", "عن الوادي", "الأخبار"],
+    "nav": ["خدمات الوادي", "الأكاديمية", "مركز الابتكار", "الأخبار والفعاليات", "المتجر", "من نحن"],
     "hero": {
       "title": "في وادي طيبة نصنع فرصاً استثمارية مبتكرة",
       "sub": "للشركات الناشئة والطلاب والمستثمرين والشركاء — موطن الابتكار التقني العميق في المدينة المنورة.",
@@ -99,15 +126,41 @@
       "allLink": "جميع الخدمات",
       "learnMore": "اعرف المزيد",
       "labs": [
-        { "icon": "chain", "name": "مختبر البلوك تشين", "desc": "العقود الذكية والتطبيقات اللامركزية وتوثيق الشهادات على السلسلة للمؤسسات." },
-        { "icon": "iot", "name": "مختبر إنترنت الأشياء", "desc": "النمذجة والتدريب في إنترنت الأشياء للمدن الذكية والصناعة." },
-        { "icon": "hub", "name": "مركز الابتكار", "desc": "مساحات عمل مشتركة واحتضان وفعاليات لمجتمع روّاد الأعمال بالمدينة." },
-        { "icon": "xr", "name": "مختبر الواقع الممتد", "desc": "محتوى غامر وأدوات إبداعية للتدريب والتعليم." }
+        {"image": "BL2.png", "name": "مختبر البلوك تشين", "desc": "العقود الذكية والتطبيقات اللامركزية وتوثيق الشهادات على السلسلة للمؤسسات." },
+        { "image": "iot1.png", "name": "مختبر إنترنت الأشياء", "desc": "النمذجة والتدريب في إنترنت الأشياء للمدن الذكية والصناعة." },
+        { "image": "innovation1.png", "name": "مركز الابتكار", "desc": "مساحات عمل مشتركة واحتضان وفعاليات لمجتمع روّاد الأعمال بالمدينة." },
+        { "image": "ArVr1.png", "name": "مختبر الواقع الممتد", "desc": "محتوى غامر وأدوات إبداعية للتدريب والتعليم." },
+        { "image": "AI1.png", "name": "مختبر الذكاء الاصطناعي", "desc": "تطبيقات تعلم الآلة وتدريب النماذج وأبحاث الذكاء الاصطناعي لحل تحديات الصناعة الواقعية." }
       ]
     },
     "partners": {
       "title": "شركاؤنا",
-      "list": ["جامعة طيبة", "سدارة", "علم", "TheNoor", "منشآت", "كاوست"]
+      "list": [
+        { "name": "تبادل", "image": "tabadul.png" },
+        { "name": "سدارة", "image": "sadara.png" },
+        { "name": "علم", "image": "ELM.png" },
+        { "name": "جامعة الملك عبدالله للعلوم والتقنية", "image": "king-abdullah.png" },
+        { "name": "TBC", "image": "TBC.png" },
+        { "name": "كلية الملك فهد الأمنية", "image": "king.png" },
+        { "name": "مستشفى الملك فيصل التخصصي ومركز الأبحاث", "image": "fasil.png" },
+        { "name": "وزارة البيئة والمياه والزراعة", "image": "mini_e.png" },
+        { "name": "أمازون", "image": "amazon.png" },
+        { "name": "بياك", "image": "biac_logo.png" },
+        { "name": "إيجي جيت", "image": "EGY.png" },
+        { "name": "هواوي", "image": "HUAWEI.png" },
+        { "name": "مسك", "image": "MISK.png" },
+        { "name": "أوراكل", "image": "Oracle.png" }
+      ]
+    },
+    "clients": {
+      "title": "عملاؤنا",
+      "list": [
+        { "name": "مايكروسوفت" },
+        { "name": "العبيكان للحلول الرقمية" },
+        { "name": "أوشن إكس" },
+        { "name": "المركز الوطني للنخيل والتمور" },
+        { "name": "الهيئة السعودية للفضاء" }
+      ]
     },
     "news": {
       "title": "آخر أخبارنا",
@@ -124,7 +177,7 @@
       "servicesTitle": "الخدمات",
       "valleyTitle": "الوادي",
       "contactTitle": "تواصل",
-      "footerLabs": ["مختبر البلوك تشين", "مختبر إنترنت الأشياء", "مركز الابتكار", "مختبر الواقع الممتد"],
+      "footerLabs": ["مختبر البلوك تشين", "مختبر إنترنت الأشياء", "مركز الابتكار", "مختبر الواقع الممتد", "مختبر الذكاء الاصطناعي"],
       "footerValley": ["عن الوادي", "الأكاديمية", "الأخبار", "الشركاء"],
       "email": "info@taibahvalley.com.sa",
       "phone": "+966 14 861 8888",
