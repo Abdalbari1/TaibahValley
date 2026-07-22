@@ -14,8 +14,8 @@
     ai: '<rect x="92" y="92" width="72" height="72" rx="8" fill="none" stroke="currentColor" stroke-width="12"/><g stroke="currentColor" stroke-width="10" stroke-linecap="round"><line x1="128" y1="24" x2="128" y2="60"/><line x1="128" y1="196" x2="128" y2="232"/><line x1="24" y1="128" x2="60" y2="128"/><line x1="196" y1="128" x2="232" y2="128"/><line x1="64" y1="64" x2="88" y2="88"/><line x1="168" y1="168" x2="192" y2="192"/><line x1="192" y1="64" x2="168" y2="88"/><line x1="88" y1="168" x2="64" y2="192"/></g><circle cx="128" cy="128" r="18" fill="currentColor"/>',
   };
 
-  const HERO_IMAGE = "----mrrvkhhg-q65o.webp";
-  const ABOUT_IMAGE = "--mrrvn1bu-v842.jpg";
+  const HERO_IMAGE = "../Images/----mrrvkhhg-q65o.webp";
+  const ABOUT_IMAGE = "../Images/--mrrvn1bu-v842.jpg";
 
   const THEME_KEY = "tv-theme";
   const LANG_KEY = "tv-lang";
@@ -41,7 +41,7 @@
     if (isSafeImageName(lab.image)) {
       return el("img", {
         attrs: {
-          src: "assets/" + lab.image,
+          src: "../Images/" + lab.image,
           alt: lab.name + " logo",
           loading: "lazy",
         },
@@ -59,7 +59,7 @@
       li.appendChild(
         el("img", {
           attrs: {
-            src: "assets/" + partner.image,
+            src: "../Images/" + partner.image,
             alt: partner.name + " logo",
             loading: "lazy",
           },
@@ -292,7 +292,7 @@
       "@type": "Organization",
       name: t.lang === "ar" ? "وادي طيبة" : "Taibah Valley",
       url: "https://www.taibahvalley.com.sa/",
-      logo: "assets/logo-white.png",
+      logo: "../Images/logo-white.png",
       email: t.footer.email,
       telephone: t.footer.phone,
       description: t.meta.description,
@@ -303,7 +303,7 @@
   async function loadContent() {
     const status = document.getElementById("load-status");
     try {
-      const res = await fetch("data/content.json", { cache: "no-store" });
+      const res = await fetch("../Lang/content.json", { cache: "no-store" });
       if (!res.ok) throw new Error("HTTP " + res.status);
       const content = await res.json();
       if (status) status.remove();

@@ -9,6 +9,7 @@
     },
     "langPill": "عربي / EN",
     "contact": "Contact us",
+    "login": "Log in",
     "nav": ["Valley Services", "The Academy", "Innovation Hub", "News and Event", "Store", "About Us"],
     "hero": {
       "title": "In Taibah Valley we create innovative investment opportunities",
@@ -102,6 +103,7 @@
     },
     "langPill": "EN / عربي",
     "contact": "تواصل معنا",
+    "login": "تسجيل الدخول",
     "nav": ["خدمات الوادي", "الأكاديمية", "مركز الابتكار", "الأخبار والفعاليات", "المتجر", "من نحن"],
     "hero": {
       "title": "في وادي طيبة نصنع فرصاً استثمارية مبتكرة",
