@@ -10,7 +10,7 @@
     "langPill": "عربي / EN",
     "contact": "Contact us",
     "login": "Log in",
-    "nav": ["Valley Services", "The Academy", "Innovation Hub", "News and Event", "Store", "About Us"],
+    "nav": ["Valley Services", "The Academy", "Innovation Hub", "News and Event","Blog","Join To Us","Our Projects", "Store", "About Us"],
     "hero": {
       "title": "In Taibah Valley we create innovative investment opportunities",
       "sub": "For startups, students, investors and partners — Madinah's home for deep-tech innovation.",
@@ -81,13 +81,31 @@
         { "date": "Aug 14, 2025", "cat": "Academy", "title": "Academy opens registration for the fall AI bootcamp cohort" }
       ]
     },
+    "contactSection": {
+      "title": "Contact us",
+      "addressLine1": "Taibah University",
+      "addressLine2": "Building 132 — 3rd Floor, Madinah",
+      "mapTitle": "Taibah Valley location on Google Maps",
+      "form": {
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "you@example.com",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Write your message here",
+        "submit": "Send",
+        "success": "Thanks — your message has been noted."
+      }
+    },
     "footer": {
       "blurb": "Madinah's innovation hub — supporting startups, research, investment and digital transformation. Taibah University, Building 132, Madinah.",
       "servicesTitle": "Services",
       "valleyTitle": "Valley",
+      "policiesTitle": "Policies",
       "contactTitle": "Contact",
       "footerLabs": ["Blockchain Lab", "IoT Lab", "Innovation Hub", "AR/VR Lab", "AI Lab"],
       "footerValley": ["About", "The Academy", "News", "Partners"],
+      "footerPolicies": ["Privacy Policy", "Terms of Use"],
       "email": "info@taibahvalley.com.sa",
       "phone": "+966 14 861 8888",
       "copyright": "© 2026 Taibah Valley. All rights reserved."
@@ -104,7 +122,7 @@
     "langPill": "EN / عربي",
     "contact": "تواصل معنا",
     "login": "تسجيل الدخول",
-    "nav": ["خدمات الوادي", "الأكاديمية", "مركز الابتكار", "الأخبار والفعاليات", "المتجر", "من نحن"],
+    "nav": ["خدمات الوادي", "الأكاديمية", "مركز الابتكار", "الأخبار والفعاليات", "المدونة","انضم الينا","اعمالنا","المتجر", "من نحن"],
     "hero": {
       "title": "في وادي طيبة نصنع فرصاً استثمارية مبتكرة",
       "sub": "للشركات الناشئة والطلاب والمستثمرين والشركاء — موطن الابتكار التقني العميق في المدينة المنورة.",
@@ -174,13 +192,31 @@
         { "date": "١٤ أغسطس ٢٠٢٥", "cat": "الأكاديمية", "title": "الأكاديمية تفتح التسجيل لدفعة خريف معسكر الذكاء الاصطناعي" }
       ]
     },
+    "contactSection": {
+      "title": "تواصل معنا",
+      "addressLine1": "جامعة طيبة",
+      "addressLine2": "مبنى 132 – الدور الثالث، المدينة المنورة",
+      "mapTitle": "موقع وادي طيبة على خرائط جوجل",
+      "form": {
+        "nameLabel": "الاسم",
+        "namePlaceholder": "اسمك",
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "example@email.com",
+        "messageLabel": "الرسالة",
+        "messagePlaceholder": "اكتب رسالتك هنا",
+        "submit": "إرسال",
+        "success": "شكراً — تم استلام رسالتك."
+      }
+    },
     "footer": {
       "blurb": "مركز الابتكار في المدينة المنورة — يدعم الشركات الناشئة والبحث والاستثمار والتحول الرقمي. جامعة طيبة، مبنى 132.",
       "servicesTitle": "الخدمات",
       "valleyTitle": "الوادي",
+      "policiesTitle": "السياسات",
       "contactTitle": "تواصل",
       "footerLabs": ["مختبر البلوك تشين", "مختبر إنترنت الأشياء", "مركز الابتكار", "مختبر الواقع الممتد", "مختبر الذكاء الاصطناعي"],
       "footerValley": ["عن الوادي", "الأكاديمية", "الأخبار", "الشركاء"],
+      "footerPolicies": ["سياسة الخصوصية", "سياسة الاستخدام"],
       "email": "info@taibahvalley.com.sa",
       "phone": "+966 14 861 8888",
       "copyright": "© 2026 وادي طيبة. جميع الحقوق محفوظة."

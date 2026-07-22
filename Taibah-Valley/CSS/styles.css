@@ -106,7 +106,7 @@ a { color: inherit; text-decoration: none; }
 .site-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 24px;
   padding: 12px 44px;
   border-bottom: 1px solid var(--nav-border);
@@ -115,9 +115,24 @@ a { color: inherit; text-decoration: none; }
   transition: background-color 0.35s;
   position: relative;
   z-index: 10;
+  /* Force a fixed physical base order (logo always pinned left) so RTL's
+     automatic flex mirroring never moves the logo. English vs Arabic then
+     swap which group sits beside it — see the rules below. */
+  direction: ltr;
 }
 
+.logo { order: 1; }
 .logo img { height: 40px; width: auto; }
+
+/* English (default): links sit right after the logo, buttons pushed to
+   the far right. */
+.site-header nav { order: 2; }
+.nav-actions { order: 3; margin-left: auto; }
+
+/* Arabic: buttons stay beside the logo on the left, links pushed to the
+   right — reading direction for the links themselves is restored too. */
+html[dir="rtl"] .nav-actions { order: 2; margin-left: 0; }
+html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; }
 
 .nav-links {
   display: flex;
@@ -158,6 +173,10 @@ a { color: inherit; text-decoration: none; }
   transition: inset-inline-start 0.25s;
 }
 [data-theme="light"] .theme-toggle .knob { inset-inline-start: 26px; }
+
+.theme-toggle .knob .icon-sun { display: none; }
+[data-theme="light"] .theme-toggle .knob .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .knob .icon-sun { display: block; }
 
 .pill-btn {
   padding: 7px 16px;
@@ -446,12 +465,70 @@ a { color: inherit; text-decoration: none; }
 }
 .news-card:hover .news-title, .news-card:focus-visible .news-title { color: var(--color-accent-200); }
 
+/* ---------- Contact ----------- */
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid var(--color-neutral-800);
+}
+.contact-form {
+  padding: 56px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--color-neutral-200);
+}
+.contact-form h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.contact-field { display: flex; flex-direction: column; gap: 7px; }
+.contact-field .field-label { font-size: 13px; font-weight: 500; color: var(--color-neutral-300); }
+.contact-field .required { color: #e2545c; margin-inline-end: 3px; }
+.contact-field input, .contact-field textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 11px 14px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-neutral-700);
+  background: var(--color-surface);
+  color: var(--color-text);
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+.contact-field input:focus, .contact-field textarea:focus { outline: none; border-color: var(--color-accent); }
+.contact-form .btn-primary { align-self: flex-start; }
+#contact-form-status { margin: 0; font-size: 13px; color: var(--color-accent-200); min-height: 1em; }
+
+.contact-info {
+  background: var(--color-neutral-200);
+  color: var(--color-text);
+  padding: 56px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.contact-map {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--color-neutral-800);
+  flex: 1 1 420px;
+}
+.contact-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.contact-address { font-style: normal; text-align: center; display: flex; flex-direction: column; gap: 6px; }
+.contact-address p { margin: 0; font-size: 14px; color: var(--color-neutral-300); }
+.contact-address a { font-size: 14px; color: var(--color-neutral-300); transition: color 0.2s; }
+.contact-address a:hover, .contact-address a:focus-visible { color: var(--color-accent-200); }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--sec-bg); color: var(--sec-tx); }
 .footer-grid {
   padding: 52px 44px 26px;
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+  grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr 1fr;
   gap: 44px;
 }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
@@ -481,6 +558,7 @@ a { color: inherit; text-decoration: none; }
   border-top: 1px solid color-mix(in srgb, var(--sec-tx) 14%, transparent);
   font-size: 12px;
   color: var(--sec-mut);
+  text-align: center;
 }
 
 /* ---------- Responsive ---------- */
@@ -488,6 +566,7 @@ a { color: inherit; text-decoration: none; }
   .news-grid { grid-template-columns: repeat(2, 1fr); }
   .about { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .contact { grid-template-columns: 1fr; }
 }
 @media (max-width: 640px) {
   .site-header { padding: 12px 20px; flex-wrap: wrap; }
@@ -498,6 +577,8 @@ a { color: inherit; text-decoration: none; }
   .news-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid { grid-template-columns: 1fr; padding: 40px 20px 20px; }
   .footer-bottom { margin: 0 20px; }
+  .contact-form, .contact-info { padding: 32px 20px; }
+  .contact-map { flex-basis: 240px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -157,7 +157,6 @@
     });
 
     document.getElementById("lang-pill").textContent = t.langPill;
-    document.getElementById("lang-pill-footer").textContent = t.langPill;
     document.getElementById("contact-btn").textContent = t.contact;
     document.getElementById("login-btn").textContent = t.login;
 
@@ -232,10 +231,34 @@
       newsGrid.appendChild(card);
     });
 
+    // Contact
+    document.getElementById("contact-title").textContent = t.contactSection.title;
+    document.getElementById("contact-addr-1").textContent = t.contactSection.addressLine1;
+    document.getElementById("contact-addr-2").textContent = t.contactSection.addressLine2;
+    document.getElementById("contact-map-frame").title = t.contactSection.mapTitle;
+
+    const cPhone = document.getElementById("contact-phone");
+    cPhone.textContent = t.footer.phone;
+    cPhone.href = "tel:" + t.footer.phone.replace(/[^+\d]/g, "");
+
+    const cEmail = document.getElementById("contact-email");
+    cEmail.textContent = t.footer.email;
+    cEmail.href = "mailto:" + encodeURIComponent(t.footer.email);
+
+    document.getElementById("contact-label-name").textContent = t.contactSection.form.nameLabel;
+    document.getElementById("contact-name").placeholder = t.contactSection.form.namePlaceholder;
+    document.getElementById("contact-label-email").textContent = t.contactSection.form.emailLabel;
+    document.getElementById("contact-email-input").placeholder = t.contactSection.form.emailPlaceholder;
+    document.getElementById("contact-label-message").textContent = t.contactSection.form.messageLabel;
+    document.getElementById("contact-message").placeholder = t.contactSection.form.messagePlaceholder;
+    document.getElementById("contact-submit").textContent = t.contactSection.form.submit;
+    document.getElementById("contact-form-status").textContent = "";
+
     // Footer
     document.getElementById("footer-blurb").textContent = t.footer.blurb;
     document.getElementById("footer-services-title").textContent = t.footer.servicesTitle;
     document.getElementById("footer-valley-title").textContent = t.footer.valleyTitle;
+    document.getElementById("footer-policies-title").textContent = t.footer.policiesTitle;
     document.getElementById("footer-contact-title").textContent = t.footer.contactTitle;
 
     const fServices = document.getElementById("footer-services-list");
@@ -252,6 +275,14 @@
       const li = el("li");
       li.appendChild(el("a", { text: label, attrs: { href: "#" } }));
       fValley.appendChild(li);
+    });
+
+    const fPolicies = document.getElementById("footer-policies-list");
+    clear(fPolicies);
+    t.footer.footerPolicies.forEach((label) => {
+      const li = el("li");
+      li.appendChild(el("a", { text: label, attrs: { href: "#" } }));
+      fPolicies.appendChild(li);
     });
 
     const emailLink = document.getElementById("footer-email");
@@ -332,7 +363,28 @@
       render(content, state.lang);
     };
     document.getElementById("lang-toggle").addEventListener("click", toggle);
-    document.getElementById("lang-toggle-footer").addEventListener("click", toggle);
+  }
+
+  /** Visual-only submit: no backend wired up yet — validates, shows a
+   *  confirmation in the current language, and resets the form. */
+  function initContactForm(content, state) {
+    const form = document.getElementById("contact-form");
+    const status = document.getElementById("contact-form-status");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      status.textContent = content[state.lang].contactSection.form.success;
+      form.reset();
+    });
+  }
+
+  function initContactScroll() {
+    document.getElementById("contact-btn").addEventListener("click", () => {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    });
   }
 
   document.addEventListener("DOMContentLoaded", async () => {
@@ -342,5 +394,7 @@
     const state = { lang: getStoredLang() };
     render(content, state.lang);
     initLangToggles(content, state);
+    initContactForm(content, state);
+    initContactScroll();
   });
 })();

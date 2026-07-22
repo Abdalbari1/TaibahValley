@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; frame-src https://www.google.com; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- Primary SEO -->
@@ -43,12 +43,15 @@
     </nav>
     <div class="nav-actions">
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme">
-        <span class="knob" aria-hidden="true"></span>
+        <span class="knob" aria-hidden="true">
+          <svg class="icon-moon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#341a52" stroke-width="2.4" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg>
+          <svg class="icon-sun" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#341a52" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"></path></svg>
+        </span>
       </button>
       <button class="pill-btn" id="lang-toggle" type="button" aria-label="Switch language">
         <span id="lang-pill"></span>
       </button>
-      <button class="btn-secondary" id="login-btn" type="button"></button>
+      <button class="btn-primary" id="login-btn" type="button"></button>
       <button class="btn-primary" id="contact-btn" type="button"></button>
     </div>
   </header>
@@ -83,7 +86,7 @@
     <section class="section" aria-labelledby="services-title">
       <div class="section-head">
         <h2 id="services-title"></h2>
-        <button class="section-link" id="services-all" type="button"></button>
+        <button class="section-link" id="services-all" type="button "></button>
       </div>
       <div class="services-grid" id="labs-grid"></div>
     </section>
@@ -104,6 +107,37 @@
         <button class="section-link" id="news-all" type="button"></button>
       </div>
       <div class="news-grid" id="news-grid"></div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <form class="contact-form" id="contact-form" novalidate>
+        <h2 id="contact-title"></h2>
+        <label class="contact-field">
+          <span class="field-label"><span class="required" aria-hidden="true">*</span><span id="contact-label-name"></span></span>
+          <input type="text" id="contact-name" name="name" required autocomplete="name">
+        </label>
+        <label class="contact-field">
+          <span class="field-label"><span class="required" aria-hidden="true">*</span><span id="contact-label-email"></span></span>
+          <input type="email" id="contact-email-input" name="email" required autocomplete="email">
+        </label>
+        <label class="contact-field">
+          <span class="field-label"><span class="required" aria-hidden="true">*</span><span id="contact-label-message"></span></span>
+          <textarea id="contact-message" name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn-primary" id="contact-submit" type="submit"></button>
+        <p id="contact-form-status" role="status"></p>
+      </form>
+      <div class="contact-info">
+        <div class="contact-map">
+          <iframe id="contact-map-frame" src="https://www.google.com/maps?q=Taibah+Valley,+Madinah,+Saudi+Arabia&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <address class="contact-address">
+          <p id="contact-addr-1"></p>
+          <p id="contact-addr-2"></p>
+          <a id="contact-phone" href="#" dir="ltr"></a>
+          <a id="contact-email" href="#" dir="ltr"></a>
+        </address>
+      </div>
     </section>
   </main>
 
@@ -141,7 +175,23 @@
                 ></circle>
               </svg>
                     </a>
-                    
+                    <a href="https://www.youtube.com/channel/UCkuzLmaLDHSCVIvfvR09JUw?view_as=subscriber" target="_blank" rel="noopener noreferrer" aria-label="Taibah Valley on YouTube">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  fill-rule="evenodd"
+                  d="M23.5 6.5a3 3 0 0 0-2.1-2.1C19.5 3.8 12 3.8 12 3.8s-7.5 0-9.4.6A3 3 0 0 0 .5 6.5 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.5 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.5ZM9.7 15.5V8.5L15.8 12l-6.1 3.5Z"
+                ></path>
+              </svg>
+                    </a>
+                    <a href="https://www.snapchat.com/@taibahvalley?sender_web_id=3c002136-fa32-47ec-96d3-b4f9e8361029&device_type=desktop&is_copy_url=true" target="_blank" rel="noopener noreferrer" aria-label="Taibah Valley on Snapchat">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M12 3c3.5 0 6 2.8 6 6.5 0 2-.3 3.6-.9 5 1 .4 2 .7 2.9.7-.2.9-1.3 1.6-2.5 2 .2.6.6 1.1 1.1 1.5-1 .5-2.1.6-3.1.4-.6 1.1-1.9 1.9-3.5 1.9s-2.9-.8-3.5-1.9c-1 .2-2.1.1-3.1-.4.5-.4.9-.9 1.1-1.5-1.2-.4-2.3-1.1-2.5-2 .9 0 1.9-.3 2.9-.7-.6-1.4-.9-3-.9-5C6 5.8 8.5 3 12 3Z"
+                ></path>
+                <circle cx="9.3" cy="10" r="0.6" fill="currentColor" stroke="none"></circle>
+                <circle cx="14.7" cy="10" r="0.6" fill="currentColor" stroke="none"></circle>
+              </svg>
+                    </a>
                 </div>
             </div>
             <div class="footer-col">
@@ -152,13 +202,14 @@
                 <h3 id="footer-valley-title"></h3>
                 <ul id="footer-valley-list"></ul>
             </div>
+            <div class="footer-col">
+                <h3 id="footer-policies-title"></h3>
+                <ul id="footer-policies-list"></ul>
+            </div>
             <div class="footer-contact">
                 <h3 id="footer-contact-title"></h3>
                 <a id="footer-email" href="#" dir="ltr"></a>
                 <a id="footer-phone" href="#" dir="ltr"></a>
-                <button class="pill-btn" id="lang-toggle-footer" type="button">
-            <span id="lang-pill-footer"></span>
-          </button>
             </div>
         </div>
         <div class="footer-bottom" id="footer-copyright"></div>
