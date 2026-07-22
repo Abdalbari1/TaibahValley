@@ -1,0 +1,223 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "site": {
+    "name": "Taibah Valley",
+    "url": "https://www.taibahvalley.com.sa/"
+  },
+  "meta": {
+    "title": "Innovation Hub | Taibah Valley",
+    "description": "Taibah Valley's Innovation Hub supports innovators, entrepreneurs and investors with training, consulting, workspaces, incubation and connected digital platforms.",
+    "keywords": "Taibah Valley, Innovation Hub, Madinah, entrepreneurship, incubator, accelerator, startups, training, consulting",
+    "locale": "en_US",
+    "canonical": "https://taibahvalley.com.sa/innovation_hub/"
+  },
+  "labels": {
+    "skipToContent": "Skip to main content",
+    "primaryNavigation": "Primary navigation",
+    "siteHome": "Taibah Valley home",
+    "logoAlt": "Taibah Valley logo",
+    "switchLanguage": "Switch language",
+    "langPill": "العربية",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleLight": "Switch to light mode",
+    "toggleDark": "Switch to dark mode",
+    "contentError": "The selected language could not be loaded."
+  },
+  "actions": {
+    "login": "Log in",
+    "contact": "Contact us"
+  },
+  "nav": [
+    { "label": "Valley Services", "href": "HomePage.html#services" },
+    { "label": "The Academy", "href": "HomePage.html" },
+    { "label": "Innovation Hub", "href": "innovation.html", "current": true },
+    { "label": "News and Events", "href": "#platforms" },
+    { "label": "Store", "href": "#platforms" },
+    { "label": "About Us", "href": "#overview" }
+  ],
+  "hero": {
+    "kicker": "Innovation Hub · Taibah Valley",
+    "title": "We create innovative solutions",
+    "lead": "An integrated entrepreneurship community that supports innovators, serves investors, and connects experts and service providers with entrepreneurs.",
+    "audience": [
+      "An integrated entrepreneurship community.",
+      "We support innovators and serve investors.",
+      "We connect experts and service providers with entrepreneurs."
+    ],
+    "primaryCta": {
+      "label": "Explore Hub services",
+      "href": "#services"
+    },
+    "secondaryCta": {
+      "label": "Submit your request",
+      "href": "#platforms"
+    }
+  },
+  "overview": {
+    "kicker": "How we help",
+    "title": "A connected ecosystem for innovation and entrepreneurship",
+    "body": "We incubate entrepreneurial projects, accelerate startup growth, and design training programmes and competitions that contribute to economic development.",
+    "note": "For Innovation Hub enquiries, contact our specialist team.",
+    "email": "innovation@taibahvalley.com.sa"
+  },
+  "services": {
+    "kicker": "What we offer",
+    "title": "Services built around your venture",
+    "intro": "The Innovation Hub brings practical support together in one place, from early-stage learning through to investment access and company growth.",
+    "items": [
+      {
+        "number": "01",
+        "icon": "training",
+        "title": "Training",
+        "description": "We provide diverse training programmes in technologies that support entrepreneurship, while enriching specialist content in entrepreneurship and future skills."
+      },
+      {
+        "number": "02",
+        "icon": "consulting",
+        "title": "Consulting",
+        "description": "Specialist consulting with leading advisers, delivering administrative guidance and inventive solutions for business development."
+      },
+      {
+        "number": "03",
+        "icon": "events",
+        "title": "Events",
+        "description": "We participate in events by providing a fertile environment that supports innovative ideas and projects."
+      },
+      {
+        "number": "04",
+        "icon": "workspace",
+        "title": "Co-working spaces",
+        "description": "Shared workspaces that enable entrepreneurs to carry out their work in a suitable environment."
+      },
+      {
+        "number": "05",
+        "icon": "incubator",
+        "title": "Business incubator and accelerator",
+        "description": "An incubator to embrace your project and nurture your startup."
+      },
+      {
+        "number": "06",
+        "icon": "meetup",
+        "title": "Meetups",
+        "description": "Led by experts and specialists to raise digital, entrepreneurship and innovation awareness across the community."
+      },
+      {
+        "number": "07",
+        "icon": "competitions",
+        "title": "Competitions",
+        "description": "Entrepreneurship competitions open new horizons and create opportunities through advisory, logistical, technical and legal support."
+      },
+      {
+        "number": "08",
+        "icon": "funding",
+        "title": "Investment and funding channels",
+        "description": "We help project owners reach investors and explore funding opportunities."
+      },
+      {
+        "number": "09",
+        "icon": "admin",
+        "title": "Administrative services",
+        "description": "We provide administrative and organisational support for entrepreneurs and startups."
+      }
+    ]
+  },
+  "platforms": {
+    "kicker": "Digital access",
+    "title": "Submit your request",
+    "intro": "Choose the service or platform that best matches your needs.",
+    "groups": [
+      [
+        {
+          "title": "Book now",
+          "icon": "booking",
+          "href": "https://taibahvalley.com.sa/booking/"
+        },
+        {
+          "title": "Events",
+          "icon": "events",
+          "href": "https://taibahvalley.com.sa/events/"
+        }
+      ],
+      [
+        {
+          "title": "Experts and specialists platform",
+          "icon": "experts",
+          "href": "https://taibahvalley.com.sa/platform-of-experts-and-specialists/"
+        },
+        {
+          "title": "Talented platform",
+          "icon": "talent",
+          "href": "https://taibahvalley.com.sa/talented-platform/"
+        },
+        {
+          "title": "Intellectual property platform",
+          "icon": "patent",
+          "href": "https://taibahvalley.com.sa/intellectual-property-platform/"
+        }
+      ],
+      [
+        {
+          "title": "Ideas platform",
+          "icon": "idea",
+          "href": "https://taibahvalley.com.sa/hub-ideas/"
+        },
+        {
+          "title": "Guidance and consulting services",
+          "icon": "guidance",
+          "href": "https://taibahvalley.com.sa/guidance-and-consulting-services/"
+        }
+      ]
+    ]
+  },
+  "manifesto": {
+    "kicker": "Our point of view",
+    "title": "We create innovative solutions",
+    "quote": "At Taibah Valley, we believe that innovation is the driver of success in solving everyday problems.",
+    "body": "We offer scale-up and market-access programmes for small and medium enterprises and facilitate access to global exhibitions. We also provide market-entry knowledge, innovation-management solutions, foundational innovation support, expert consulting, access to applications and more services that empower the economy and encourage knowledge exchange.",
+    "cta": {
+      "label": "Get in touch with the Innovation Hub",
+      "href": "mailto:innovation@taibahvalley.com.sa"
+    }
+  },
+  "footer": {
+    "blurb": "Madinah's innovation hub supporting startups, research, investment and digital transformation. Taibah University, Building 132, Madinah.",
+    "servicesTitle": "Services",
+    "services": [
+      { "label": "Blockchain Lab", "href": "HomePage.html#services" },
+      { "label": "IoT Lab", "href": "HomePage.html#services" },
+      { "label": "Innovation Hub", "href": "innovation.html" },
+      { "label": "AR/VR Lab", "href": "HomePage.html#services" },
+      { "label": "AI Lab", "href": "HomePage.html#services" }
+    ],
+    "valleyTitle": "Valley",
+    "valley": [
+      { "label": "About", "href": "HomePage.html" },
+      { "label": "The Academy", "href": "HomePage.html" },
+      { "label": "News", "href": "#platforms" },
+      { "label": "Partners", "href": "HomePage.html#partners" }
+    ],
+    "contactTitle": "Contact",
+    "email": "info@taibahvalley.com.sa",
+    "phone": "+966 14 861 8888",
+    "copyright": "© 2026 Taibah Valley. All rights reserved.",
+    "social": [
+      {
+        "label": "Taibah Valley on X",
+        "icon": "x",
+        "href": "https://twitter.com/TaibahValley"
+      },
+      {
+        "label": "Taibah Valley on LinkedIn",
+        "icon": "linkedin",
+        "href": "https://www.linkedin.com/company/taibahvalley"
+      },
+      {
+        "label": "Taibah Valley on Instagram",
+        "icon": "instagram",
+        "href": "https://www.instagram.com/taibahvalley/"
+      }
+    ]
+  }
+}

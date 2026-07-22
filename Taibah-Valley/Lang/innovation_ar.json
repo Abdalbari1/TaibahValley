@@ -1,0 +1,223 @@
+{
+  "lang": "ar",
+  "dir": "rtl",
+  "site": {
+    "name": "وادي طيبة",
+    "url": "https://www.taibahvalley.com.sa/"
+  },
+  "meta": {
+    "title": "مركز الابتكار | وادي طيبة",
+    "description": "يدعم مركز الابتكار في وادي طيبة المبتكرين ورواد الأعمال والمستثمرين من خلال التدريب والاستشارات ومساحات العمل والاحتضان والمنصات الرقمية المتصلة.",
+    "keywords": "وادي طيبة، مركز الابتكار، المدينة المنورة، ريادة الأعمال، حاضنة أعمال، مسرعة أعمال، شركات ناشئة، تدريب، استشارات",
+    "locale": "ar_SA",
+    "canonical": "https://taibahvalley.com.sa/innovation_hub/"
+  },
+  "labels": {
+    "skipToContent": "انتقل إلى المحتوى الرئيسي",
+    "primaryNavigation": "التنقل الرئيسي",
+    "siteHome": "الصفحة الرئيسية لوادي طيبة",
+    "logoAlt": "شعار وادي طيبة",
+    "switchLanguage": "تغيير اللغة",
+    "langPill": "EN",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "toggleLight": "التبديل إلى الوضع الفاتح",
+    "toggleDark": "التبديل إلى الوضع الليلي",
+    "contentError": "تعذر تحميل اللغة المحددة."
+  },
+  "actions": {
+    "login": "تسجيل الدخول",
+    "contact": "تواصل معنا"
+  },
+  "nav": [
+    { "label": "خدمات الوادي", "href": "HomePage.html#services" },
+    { "label": "الأكاديمية", "href": "HomePage.html" },
+    { "label": "مركز الابتكار", "href": "innovation.html", "current": true },
+    { "label": "الأخبار والفعاليات", "href": "#platforms" },
+    { "label": "المتجر", "href": "#platforms" },
+    { "label": "من نحن", "href": "#overview" }
+  ],
+  "hero": {
+    "kicker": "مركز الابتكار · وادي طيبة",
+    "title": "نصنع الحلول المبتكرة",
+    "lead": "مجتمع ريادة أعمال متكامل يدعم المبتكرين ويخدم المستثمرين ويربط الخبراء ومزودي الخدمات بالرياديين.",
+    "audience": [
+      "مجتمع ريادة أعمال متكامل.",
+      "ندعم المبتكرين ونخدم المستثمرين.",
+      "نربط الخبراء ومزودي الخدمات بالرياديين."
+    ],
+    "primaryCta": {
+      "label": "اكتشف خدمات المركز",
+      "href": "#services"
+    },
+    "secondaryCta": {
+      "label": "تقدم بطلبك",
+      "href": "#platforms"
+    }
+  },
+  "overview": {
+    "kicker": "كيف ندعمك",
+    "title": "منظومة متكاملة للابتكار وريادة الأعمال",
+    "body": "نحتضن المشاريع الريادية ونسرّع نمو الشركات الناشئة، ونصمم البرامج التدريبية والمسابقات لصناعة الشركات الناشئة والمساهمة في التنمية الاقتصادية.",
+    "note": "لاستفسارات مركز الابتكار، تواصل مع فريقنا المتخصص.",
+    "email": "innovation@taibahvalley.com.sa"
+  },
+  "services": {
+    "kicker": "ما نقدمه",
+    "title": "خدمات تنمو مع مشروعك",
+    "intro": "يجمع مركز الابتكار الدعم العملي في مكان واحد، من التعلم في المراحل الأولى إلى الوصول للمستثمرين وتنمية الشركات.",
+    "items": [
+      {
+        "number": "٠١",
+        "icon": "training",
+        "title": "التدريب",
+        "description": "نقدم برامج تدريبية متنوعة في التقنيات الداعمة لريادة الأعمال في الوقت والمكان المناسبين للمستفيدين، إضافة إلى إثراء المحتوى في المواضيع المتخصصة بريادة الأعمال ومهارات المستقبل."
+      },
+      {
+        "number": "٠٢",
+        "icon": "consulting",
+        "title": "الاستشارات",
+        "description": "خدمات استشارية متخصصة مع نخبة من الاستشاريين لتقديم الاستشارات الإدارية والحلول الإبداعية المبتكرة لتطوير الأعمال."
+      },
+      {
+        "number": "٠٣",
+        "icon": "events",
+        "title": "الفعاليات",
+        "description": "نشارك في الفعاليات من خلال توفير بيئة خصبة للمتدربين تدعم الأفكار والمشاريع المبتكرة."
+      },
+      {
+        "number": "٠٤",
+        "icon": "workspace",
+        "title": "مساحات عمل مشتركة",
+        "description": "مساحات عمل مشتركة لتمكين رواد الأعمال من ممارسة أعمالهم في بيئة مناسبة."
+      },
+      {
+        "number": "٠٥",
+        "icon": "incubator",
+        "title": "حاضنة ومسرعة أعمال",
+        "description": "حاضنة أعمال لاحتضان مشروعك ورعاية شركتك الناشئة."
+      },
+      {
+        "number": "٠٦",
+        "icon": "meetup",
+        "title": "لقاءات",
+        "description": "يقدمها نخبة من الخبراء والمتخصصين للمساهمة في رفع الوعي الرقمي وريادة الأعمال والابتكار لدى كافة أفراد المجتمع."
+      },
+      {
+        "number": "٠٧",
+        "icon": "competitions",
+        "title": "مسابقات",
+        "description": "نقدم مسابقات لرواد الأعمال لفتح آفاق جديدة وخلق فرص عمل من خلال الخدمات الاستشارية واللوجستية والفنية والقانونية."
+      },
+      {
+        "number": "٠٨",
+        "icon": "funding",
+        "title": "قنوات استثمار وتمويل",
+        "description": "نمكّن أصحاب المشاريع من فرصة الوصول إلى المستثمرين واستكشاف فرص التمويل."
+      },
+      {
+        "number": "٠٩",
+        "icon": "admin",
+        "title": "خدمات إدارية",
+        "description": "نهتم بتوفير الدعم الإداري والتنظيمي لرواد الأعمال والشركات الناشئة."
+      }
+    ]
+  },
+  "platforms": {
+    "kicker": "الوصول الرقمي",
+    "title": "تقدم بطلبك",
+    "intro": "اختر الخدمة أو المنصة التي تناسب احتياجك.",
+    "groups": [
+      [
+        {
+          "title": "احجز الآن",
+          "icon": "booking",
+          "href": "https://taibahvalley.com.sa/booking/"
+        },
+        {
+          "title": "الفعاليات",
+          "icon": "events",
+          "href": "https://taibahvalley.com.sa/events/"
+        }
+      ],
+      [
+        {
+          "title": "منصة الخبراء والمختصين",
+          "icon": "experts",
+          "href": "https://taibahvalley.com.sa/platform-of-experts-and-specialists/"
+        },
+        {
+          "title": "منصة الموهوبين",
+          "icon": "talent",
+          "href": "https://taibahvalley.com.sa/talented-platform/"
+        },
+        {
+          "title": "منصة الملكية الفكرية",
+          "icon": "patent",
+          "href": "https://taibahvalley.com.sa/intellectual-property-platform/"
+        }
+      ],
+      [
+        {
+          "title": "منصة الأفكار",
+          "icon": "idea",
+          "href": "https://taibahvalley.com.sa/hub-ideas/"
+        },
+        {
+          "title": "خدمات الإرشاد والاستشارة",
+          "icon": "guidance",
+          "href": "https://taibahvalley.com.sa/guidance-and-consulting-services/"
+        }
+      ]
+    ]
+  },
+  "manifesto": {
+    "kicker": "رؤيتنا",
+    "title": "نصنع الحلول المبتكرة",
+    "quote": "هنا في شركة وادي طيبة نؤمن بأن الابتكار هو المحرك للنجاح في حل المشاكل اليومية.",
+    "body": "نقدم برامج توسيع النطاق والوصول للشركات الصغيرة والمتوسطة، ونسهل الوصول إلى المعارض العالمية. كما نوفر الدعم في معرفة السوق ودخوله، وحلول إدارة الابتكارات، ودعم الابتكار الأساسي، والاستشارات من ذوي الخبرة، والوصول إلى التطبيقات والعديد من الخدمات الأخرى التي تمكّن النظام الاقتصادي وتشجع على تبادل المعرفة.",
+    "cta": {
+      "label": "تواصل مع مركز الابتكار",
+      "href": "mailto:innovation@taibahvalley.com.sa"
+    }
+  },
+  "footer": {
+    "blurb": "مركز المدينة المنورة للابتكار؛ ندعم الشركات الناشئة والبحث والاستثمار والتحول الرقمي. جامعة طيبة، مبنى 132، المدينة المنورة.",
+    "servicesTitle": "الخدمات",
+    "services": [
+      { "label": "مختبر البلوكتشين", "href": "HomePage.html#services" },
+      { "label": "مختبر إنترنت الأشياء", "href": "HomePage.html#services" },
+      { "label": "مركز الابتكار", "href": "innovation.html" },
+      { "label": "مختبر الواقع الممتد", "href": "HomePage.html#services" },
+      { "label": "مختبر الذكاء الاصطناعي", "href": "HomePage.html#services" }
+    ],
+    "valleyTitle": "الوادي",
+    "valley": [
+      { "label": "عن الوادي", "href": "HomePage.html" },
+      { "label": "الأكاديمية", "href": "HomePage.html" },
+      { "label": "الأخبار", "href": "#platforms" },
+      { "label": "شركاؤنا", "href": "HomePage.html#partners" }
+    ],
+    "contactTitle": "تواصل",
+    "email": "info@taibahvalley.com.sa",
+    "phone": "+966 14 861 8888",
+    "copyright": "© 2026 وادي طيبة. جميع الحقوق محفوظة.",
+    "social": [
+      {
+        "label": "وادي طيبة على إكس",
+        "icon": "x",
+        "href": "https://twitter.com/TaibahValley"
+      },
+      {
+        "label": "وادي طيبة على لينكدإن",
+        "icon": "linkedin",
+        "href": "https://www.linkedin.com/company/taibahvalley"
+      },
+      {
+        "label": "وادي طيبة على إنستغرام",
+        "icon": "instagram",
+        "href": "https://www.instagram.com/taibahvalley/"
+      }
+    ]
+  }
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="../Images/innovation1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="theme-color" content="#341a52">
+  <title></title>
+  <link rel="canonical" href="">
+  <link rel="icon" href="../Images/logo-white.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/innovation.css">
+</head>
+<body class="innovation-page">
+  <a class="skip-link" id="skip-link" href="#main-content"></a>
+
+  <header class="site-header innovation-header" id="top">
+    <a class="logo" id="brand-link" href="HomePage.html" aria-label="">
+      <img id="brand-logo" src="../Images/logo-white.png" alt="" width="160" height="40">
+    </a>
+
+    <nav class="innovation-nav" id="primary-navigation" aria-label="">
+      <ul class="nav-links" id="nav-links"></ul>
+      <div class="mobile-menu-actions">
+        <button class="btn-secondary" id="mobile-login-btn" type="button"></button>
+        <button class="btn-primary" id="mobile-contact-btn" type="button"></button>
+      </div>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="true" aria-label="">
+        <span class="knob" aria-hidden="true"></span>
+      </button>
+      <button class="pill-btn" id="lang-toggle" type="button" aria-label="">
+        <span id="lang-pill"></span>
+      </button>
+      <button class="btn-secondary" id="login-btn" type="button"></button>
+      <button class="btn-primary" id="contact-btn" type="button"></button>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false" aria-label="">
+      <span class="menu-toggle__lines" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <p class="visually-hidden" id="load-status" role="status" aria-live="polite"></p>
+
+    <section class="innovation-hero" aria-labelledby="hero-title">
+      <div class="innovation-container innovation-hero__grid">
+        <div class="innovation-hero__content">
+          <p class="innovation-kicker" id="hero-kicker"></p>
+          <h1 id="hero-title"></h1>
+          <p class="innovation-hero__lead" id="hero-lead"></p>
+          <ul class="innovation-hero__audience" id="hero-audience-list"></ul>
+          <div class="innovation-hero__actions">
+            <a class="btn-primary" id="hero-primary-cta" href="#services"></a>
+            <a class="btn-secondary" id="hero-secondary-cta" href="#platforms"></a>
+          </div>
+        </div>
+
+        <div class="innovation-hero__visual" aria-hidden="true">
+          <div class="innovation-hero__orbit innovation-hero__orbit--outer"></div>
+          <div class="innovation-hero__orbit innovation-hero__orbit--inner"></div>
+          <div class="innovation-hero__logo-panel">
+            <img src="../Images/innovation1.png" alt="" width="512" height="512">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="innovation-overview" id="overview" aria-labelledby="overview-title">
+      <div class="innovation-container innovation-overview__grid">
+        <div>
+          <p class="innovation-kicker" id="overview-kicker"></p>
+          <h2 id="overview-title"></h2>
+        </div>
+        <div class="innovation-overview__copy">
+          <p id="overview-body"></p>
+          <p id="overview-note"></p>
+          <a class="innovation-inline-link" id="overview-email" href="mailto:innovation@taibahvalley.com.sa" dir="ltr"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="innovation-services" id="services" aria-labelledby="services-title">
+      <div class="innovation-container">
+        <header class="innovation-section-heading">
+          <p class="innovation-kicker" id="services-kicker"></p>
+          <h2 id="services-title"></h2>
+          <p id="services-intro"></p>
+        </header>
+        <ol class="innovation-services-grid" id="services-grid"></ol>
+      </div>
+    </section>
+
+    <section class="innovation-platforms" id="platforms" aria-labelledby="platforms-title">
+      <div class="innovation-container">
+        <header class="innovation-section-heading innovation-section-heading--center">
+          <p class="innovation-kicker" id="platforms-kicker"></p>
+          <h2 id="platforms-title"></h2>
+          <p id="platforms-intro"></p>
+        </header>
+        <article class="innovation-platform-board" id="platform-board"></article>
+      </div>
+    </section>
+
+    <section class="innovation-manifesto" aria-labelledby="manifesto-title">
+      <div class="innovation-container">
+        <figure class="innovation-manifesto__card">
+          <figcaption>
+            <p class="innovation-kicker" id="manifesto-kicker"></p>
+            <h2 id="manifesto-title"></h2>
+          </figcaption>
+          <blockquote>
+            <p id="manifesto-quote"></p>
+          </blockquote>
+          <p class="innovation-manifesto__body" id="manifesto-body"></p>
+          <a class="innovation-manifesto__link" id="manifesto-cta" href="mailto:innovation@taibahvalley.com.sa"></a>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a id="footer-brand-link" href="HomePage.html" aria-label="">
+          <img id="footer-logo" src="../Images/logo-white.png" alt="" width="168" height="42">
+        </a>
+        <p id="footer-blurb"></p>
+        <div class="social-links" id="social-links"></div>
+      </div>
+
+      <div class="footer-col">
+        <h3 id="footer-services-title"></h3>
+        <ul id="footer-services-list"></ul>
+      </div>
+
+      <div class="footer-col">
+        <h3 id="footer-valley-title"></h3>
+        <ul id="footer-valley-list"></ul>
+      </div>
+
+      <div class="footer-contact" id="footer-contact">
+        <h3 id="footer-contact-title"></h3>
+        <a id="footer-email" href="#" dir="ltr"></a>
+        <a id="footer-phone" href="#" dir="ltr"></a>
+        <button class="pill-btn" id="lang-toggle-footer" type="button" aria-label="">
+          <span id="lang-pill-footer"></span>
+        </button>
+      </div>
+    </div>
+    <div class="footer-bottom" id="footer-copyright"></div>
+  </footer>
+
+  <script src="../JS/innovation.js" defer></script>
+</body>
+</html>
