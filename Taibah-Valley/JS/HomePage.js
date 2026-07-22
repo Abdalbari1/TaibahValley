@@ -159,6 +159,7 @@
     document.getElementById("lang-pill").textContent = t.langPill;
     document.getElementById("contact-btn").textContent = t.contact;
     document.getElementById("login-btn").textContent = t.login;
+    document.getElementById("nav-toggle").setAttribute("aria-label", t.menuLabel);
 
     // Hero
     document.getElementById("hero-title").textContent = t.hero.title;
@@ -387,6 +388,33 @@
     });
   }
 
+  /** Mobile hamburger menu: toggles the nav links + action buttons panel
+   *  below the header. Above the mobile breakpoint the panel is always
+   *  visible via CSS, so this only matters on small screens. */
+  function initNavToggle() {
+    const header = document.querySelector(".site-header");
+    const toggle = document.getElementById("nav-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    function setOpen(open) {
+      header.setAttribute("data-nav-open", String(open));
+      toggle.setAttribute("aria-expanded", String(open));
+    }
+
+    toggle.addEventListener("click", () => {
+      setOpen(header.getAttribute("data-nav-open") !== "true");
+    });
+    navLinks.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") setOpen(false);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setOpen(false);
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1080) setOpen(false);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", async () => {
     initTheme();
     const content = await loadContent();
@@ -396,5 +424,6 @@
     initLangToggles(content, state);
     initContactForm(content, state);
     initContactScroll();
+    initNavToggle();
   });
 })();

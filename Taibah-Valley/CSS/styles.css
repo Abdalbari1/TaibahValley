@@ -1,5 +1,8 @@
 /* =========================================================
    Taibah Valley — stylesheet
+   Mobile-first: base rules target small screens; two enhancement
+   tiers layer on progressively — min-width:641px (tablet) and
+   min-width:1081px (desktop).
    Theme via CSS custom properties, dark (default) + light.
    Layout uses logical properties so it mirrors correctly in RTL (Arabic).
    ========================================================= */
@@ -106,9 +109,10 @@ a { color: inherit; text-decoration: none; }
 .site-header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 24px;
-  padding: 12px 44px;
+  gap: 12px;
+  padding: 12px 20px;
   border-bottom: 1px solid var(--nav-border);
   background: var(--nav-bg);
   color: var(--nav-tx);
@@ -117,37 +121,77 @@ a { color: inherit; text-decoration: none; }
   z-index: 10;
   /* Force a fixed physical base order (logo always pinned left) so RTL's
      automatic flex mirroring never moves the logo. English vs Arabic then
-     swap which group sits beside it — see the rules below. */
+     swap which group sits beside it once the desktop tier applies. */
   direction: ltr;
 }
 
 .logo { order: 1; }
-.logo img { height: 40px; width: auto; }
+.logo img { height: 32px; width: auto; }
 
-/* English (default): links sit right after the logo, buttons pushed to
-   the far right. */
-.site-header nav { order: 2; }
-.nav-actions { order: 3; margin-left: auto; }
+/* Hamburger toggle — mobile only, hidden once the desktop nav shows. */
+.nav-toggle {
+  order: 2;
+  margin-inline-start: auto;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--nav-pill-bd);
+  border-radius: var(--radius-md);
+  color: var(--nav-tx);
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle .icon-close { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-menu { display: none; }
+.nav-toggle[aria-expanded="true"] .icon-close { display: block; }
 
-/* Arabic: buttons stay beside the logo on the left, links pushed to the
-   right — reading direction for the links themselves is restored too. */
-html[dir="rtl"] .nav-actions { order: 2; margin-left: 0; }
-html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; }
+/* Mobile: nav links + action buttons collapse into one panel below the
+   header row, toggled open via [data-nav-open] on .site-header. */
+.site-header nav {
+  order: 3;
+  flex-basis: 100%;
+  display: none;
+}
+.site-header[data-nav-open="true"] nav { display: block; }
 
 .nav-links {
   display: flex;
-  gap: 26px;
-  font-size: 13.5px;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--nav-mut);
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 14px 0 6px;
 }
-.nav-links a { cursor: pointer; transition: color 0.2s; }
+.nav-links a {
+  cursor: pointer;
+  display: block;
+  padding: 8px 2px;
+  transition: color 0.2s;
+}
 .nav-links a:hover, .nav-links a:focus-visible { color: var(--nav-ac); }
 
-.nav-actions { display: flex; gap: 12px; align-items: center; }
+/* Reading direction for the links themselves — independent of the panel's
+   own open/closed layout, which is handled above. */
+html[dir="rtl"] .site-header nav { direction: rtl; }
+
+.nav-actions {
+  order: 4;
+  flex-basis: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--nav-border);
+}
+.site-header[data-nav-open="true"] .nav-actions { display: flex; }
+.nav-actions .btn-primary { width: 100%; text-align: center; }
 
 .theme-toggle {
   width: 54px;
@@ -223,7 +267,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  height: 560px;
+  height: 460px;
   overflow: hidden;
 }
 .hero-media {
@@ -235,41 +279,43 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 }
 .hero-card {
   position: absolute;
-  bottom: 44px;
-  inset-inline-start: 44px;
-  max-width: 640px;
+  bottom: 20px;
+  inset-inline-start: 20px;
+  inset-inline-end: 20px;
+  max-width: none;
   background: color-mix(in srgb, var(--color-surface) 88%, transparent);
   backdrop-filter: blur(10px);
   border: 1px solid var(--color-neutral-700);
   border-radius: var(--radius-md);
-  padding: 32px 34px;
+  padding: 22px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
   box-shadow: var(--shadow-lg);
 }
 .hero-card h1 {
   font-family: var(--font-heading);
-  font-size: 36px;
+  font-size: clamp(22px, 5vw, 36px);
   line-height: 1.2;
   font-weight: 500;
   letter-spacing: -0.015em;
   margin: 0;
 }
 .hero-card p {
-  font-size: 15px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.65;
   color: var(--color-neutral-300);
   margin: 0;
 }
-.hero-actions { display: flex; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
+.hero-actions { display: flex; gap: 10px; margin-top: 4px; flex-wrap: wrap; }
+.hero-actions .btn-primary, .hero-actions .btn-secondary { flex: 1 1 auto; text-align: center; }
 
 /* ---------- About ---------- */
 .about {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 48px;
-  padding: 72px 44px;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 40px 20px;
   align-items: center;
   background-color: var(--color-neutral-200);
 }
@@ -283,7 +329,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 }
 .about-copy h2 {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: clamp(22px, 4vw, 32px);
   font-weight: 500;
   letter-spacing: -0.01em;
   line-height: 1.25;
@@ -296,17 +342,17 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
   max-width: 56ch;
   margin: 0;
 }
-.stats { display: flex; gap: 48px; margin-top: 12px; flex-wrap: wrap; list-style: none; padding: 0; }
+.stats { display: flex; gap: 24px; margin-top: 12px; flex-wrap: wrap; list-style: none; padding: 0; }
 .stats .stat-value {
   font-family: var(--font-heading);
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 500;
   color: var(--color-accent-200);
   display: block;
 }
 .stats .stat-label { font-size: 12.5px; color: var(--color-neutral-400); }
 .about-media {
-  height: 320px;
+  height: 200px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-neutral-800);
@@ -315,20 +361,20 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 
 /* ---------- Section headers ---------- */
 .section {
-  padding: 8px 44px 72px;
+  padding: 8px 20px 48px;
   background-color: var(--color-neutral-200);
 }
 .section-head {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
   gap: 12px;
   flex-wrap: wrap;
 }
 .section-head h2 {
   font-family: var(--font-heading);
-  font-size: 30px;
+  font-size: clamp(22px, 4vw, 30px);
   font-weight: 500;
   letter-spacing: -0.01em;
   margin: 0;
@@ -386,7 +432,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 .partners {
   border-top: 1px solid var(--color-neutral-800);
   border-bottom: 1px solid var(--color-neutral-800);
-  padding: 48px 44px;
+  padding: 32px 20px;
   text-align: center;
   background-color: var(--color-neutral-200);
 }
@@ -396,21 +442,21 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
   font-weight: 500;
   color: var(--color-neutral-400);
   text-transform: uppercase;
-  margin: 0 0 26px;
+  margin: 0 0 22px;
 }
 .partners-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
+  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 .partner-tile {
-  height: 160px;
-  width: 260px;
-  flex: 0 0 260px;
+  height: 90px;
+  width: 140px;
+  flex: 0 0 140px;
   background: transparent;
   border: none;
   overflow: hidden;
@@ -427,7 +473,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 /* ---------- News ---------- */
 .news-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   gap: 14px;
 }
 .news-card {
@@ -468,11 +514,11 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 /* ---------- Contact ----------- */
 .contact {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   border-top: 1px solid var(--color-neutral-800);
 }
 .contact-form {
-  padding: 56px 44px;
+  padding: 32px 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -480,7 +526,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 }
 .contact-form h2 {
   font-family: var(--font-heading);
-  font-size: 28px;
+  font-size: clamp(22px, 4vw, 28px);
   font-weight: 500;
   letter-spacing: -0.01em;
   margin: 0;
@@ -506,7 +552,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 .contact-info {
   background: var(--color-neutral-200);
   color: var(--color-text);
-  padding: 56px 44px;
+  padding: 32px 20px;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -515,7 +561,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--color-neutral-800);
-  flex: 1 1 420px;
+  flex: 1 1 240px;
 }
 .contact-map iframe { width: 100%; height: 100%; border: 0; display: block; }
 .contact-address { font-style: normal; text-align: center; display: flex; flex-direction: column; gap: 6px; }
@@ -526,15 +572,15 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 /* ---------- Footer ---------- */
 .site-footer { background: var(--sec-bg); color: var(--sec-tx); }
 .footer-grid {
-  padding: 52px 44px 26px;
+  padding: 32px 20px 20px;
   display: grid;
-  grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr 1fr;
-  gap: 44px;
+  grid-template-columns: 1fr;
+  gap: 32px;
 }
 .footer-brand { display: flex; flex-direction: column; gap: 14px; }
 .footer-brand img { height: 42px; width: auto; align-self: flex-start; }
 .footer-brand p { font-size: 13px; line-height: 1.75; color: var(--sec-mut); max-width: 36ch; margin: 0; }
-.social-links { display: flex; gap: 10px; }
+.social-links { display: flex; flex-wrap: wrap; gap: 10px; }
 .social-links a {
   width: 34px; height: 34px;
   border-radius: 50%;
@@ -553,7 +599,7 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 .footer-contact { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .footer-contact a[href^="mailto"], .footer-contact a[href^="tel"] { font-size: 13px; color: var(--sec-mut); }
 .footer-bottom {
-  margin: 0 44px;
+  margin: 0 20px;
   padding: 16px 0;
   border-top: 1px solid color-mix(in srgb, var(--sec-tx) 14%, transparent);
   font-size: 12px;
@@ -562,23 +608,108 @@ html[dir="rtl"] .site-header nav { order: 3; margin-left: auto; direction: rtl; 
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1080px) {
+
+/* Tablet and up */
+@media (min-width: 641px) {
+  .site-header { padding: 12px 44px; gap: 24px; }
+  .logo img { height: 40px; }
+
+  .hero { height: 500px; }
+  .hero-card {
+    max-width: 520px;
+    padding: 28px;
+  }
+
+  .about { grid-template-columns: 1fr; padding: 56px 44px; }
+  .about-media { height: 260px; }
+  .stats { gap: 36px; }
+
+  .section, .partners { padding-left: 44px; padding-right: 44px; }
+  .section { padding-bottom: 60px; }
+  .partners { padding-top: 40px; padding-bottom: 40px; }
+  .partner-tile { width: 200px; height: 120px; flex-basis: 200px; }
+
   .news-grid { grid-template-columns: repeat(2, 1fr); }
-  .about { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-  .contact { grid-template-columns: 1fr; }
+
+  .contact-form, .contact-info { padding: 44px; }
+  .contact-map { flex: 1 1 320px; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; padding: 44px 44px 24px; }
+  .footer-bottom { margin: 0 44px; }
 }
-@media (max-width: 640px) {
-  .site-header { padding: 12px 20px; flex-wrap: wrap; }
-  .nav-links { display: none; }
-  .hero-card { inset-inline-start: 20px; inset-inline-end: 20px; max-width: none; bottom: 20px; padding: 22px; }
-  .hero-card h1 { font-size: 26px; }
-  .about, .section, .partners { padding-left: 20px; padding-right: 20px; }
-  .news-grid { grid-template-columns: 1fr 1fr; }
-  .footer-grid { grid-template-columns: 1fr; padding: 40px 20px 20px; }
-  .footer-bottom { margin: 0 20px; }
-  .contact-form, .contact-info { padding: 32px 20px; }
-  .contact-map { flex-basis: 240px; }
+
+/* Desktop and up — the header carries a lot of content (a 9-item nav
+   plus 4 action buttons), so it stays behind the hamburger through the
+   tablet tier too and only goes fully inline once there's room for it. */
+@media (min-width: 1081px) {
+  .nav-toggle { display: none; }
+
+  /* nav is the one item with unpredictable/growing content (many nav
+     items across two languages), so it's the one that flex-grows to fill
+     whatever space logo + actions don't need — flex-basis:0 means that
+     growth is computed from scratch rather than nav's own (wide, unwrapped)
+     content width, which is what actually constrains it enough to wrap
+     internally (below) instead of forcing .site-header onto two rows.
+     Growing to fill the remaining space also naturally pushes it flush
+     against whichever edge it sits at, in either language — no
+     margin-left:auto needed. */
+  .site-header nav { flex: 1 1 0%; min-width: 0; display: block !important; order: 2; }
+  .nav-actions { order: 3; flex-shrink: 0; }
+
+  /* Arabic: buttons stay beside the logo, links flow from the far side. */
+  html[dir="rtl"] .nav-actions { order: 2; }
+  html[dir="rtl"] .site-header nav { order: 3; }
+
+  /* No justify-content override needed: nav-links defaults to flex-start,
+     which — combined with nav's own direction (ltr inherited in English,
+     rtl set above for Arabic) — naturally lands the links at nav's start
+     edge: beside the logo in English, at the far edge in Arabic. */
+  .nav-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    column-gap: 22px;
+    font-size: 13px;
+    padding: 0;
+  }
+  .nav-links a { padding: 0; }
+
+  .nav-actions {
+    flex-basis: auto;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    padding-top: 0;
+    border-top: none;
+  }
+  .nav-actions .btn-primary { width: auto; }
+
+  .about { grid-template-columns: 1.1fr 0.9fr; gap: 48px; padding: 72px 44px; }
+  .about-media { height: 320px; }
+  .stats { gap: 48px; }
+
+  .hero { height: 560px; }
+  .hero-card {
+    inset-inline-start: 44px;
+    inset-inline-end: auto;
+    bottom: 44px;
+    max-width: 640px;
+    padding: 32px 34px;
+    gap: 14px;
+  }
+  .hero-card p { font-size: 15px; line-height: 1.7; }
+  .hero-actions { gap: 12px; margin-top: 6px; }
+  .hero-actions .btn-primary, .hero-actions .btn-secondary { flex: 0 1 auto; }
+
+  .partner-tile { width: 260px; height: 160px; flex-basis: 260px; }
+
+  .news-grid { grid-template-columns: repeat(4, 1fr); }
+
+  .contact { grid-template-columns: 1fr 1fr; }
+  .contact-map { flex: 1 1 420px; }
+
+  .footer-grid { grid-template-columns: 1.3fr 0.9fr 0.9fr 0.9fr 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {
