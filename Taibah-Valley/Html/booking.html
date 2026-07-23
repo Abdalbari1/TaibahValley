@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:image" content="../Images/logo-white.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="">
+  <meta name="twitter:description" content="">
+  <meta name="theme-color" content="#341a52">
+  <title></title>
+  <link rel="canonical" href="">
+  <link rel="icon" href="../Images/logo-white.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/booking.css">
+</head>
+<body class="booking-page">
+  <a class="skip-link" id="skip-link" href="#main-content"></a>
+
+  <header class="site-header booking-header" id="top">
+    <a class="logo" id="brand-link" href="HomePage.html" aria-label="">
+      <img id="brand-logo" src="../Images/logo-white.png" alt="" width="160" height="40">
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="">
+      <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+      <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"></path></svg>
+    </button>
+
+    <nav id="primary-navigation" aria-label="">
+      <ul class="nav-links" id="nav-links"></ul>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="">
+        <span class="knob" aria-hidden="true">
+          <svg class="icon-moon" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#341a52" stroke-width="2.4" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path></svg>
+          <svg class="icon-sun" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#341a52" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"></path></svg>
+        </span>
+      </button>
+      <button class="pill-btn" id="lang-toggle" type="button" aria-label="">
+        <span id="lang-pill"></span>
+      </button>
+      <a class="btn-primary" id="login-link" href="#"></a>
+      <a class="btn-primary" id="contact-link" href="#footer-contact"></a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <p class="visually-hidden" id="load-status" role="status" aria-live="polite"></p>
+
+    <section class="booking-hero" aria-labelledby="hero-title">
+      <div class="booking-container booking-hero__layout">
+        <div class="booking-hero__content">
+          <p class="booking-kicker" id="hero-kicker"></p>
+          <h1 id="hero-title"></h1>
+          <p id="hero-description"></p>
+          <a class="btn-primary booking-hero__cta" id="hero-cta" href="https://taibahvalley.com.sa/book-now/" target="_blank" rel="noopener noreferrer"></a>
+        </div>
+        <div class="booking-hero__panel">
+          <img id="hero-image" src="../Images/--mrrvnj5r-wvbe.jpg" alt="" width="640" height="420">
+        </div>
+      </div>
+    </section>
+
+    <section class="booking-options" aria-labelledby="options-title">
+      <div class="booking-container">
+        <header class="booking-section-head">
+          <p class="booking-kicker" id="options-kicker"></p>
+          <h2 id="options-title"></h2>
+          <p id="options-description"></p>
+        </header>
+        <div class="booking-cards" id="booking-cards"></div>
+      </div>
+    </section>
+
+    <aside class="booking-note" aria-labelledby="note-title">
+      <div class="booking-container booking-note__inner">
+        <h2 id="note-title"></h2>
+        <p id="note-body"></p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a id="footer-brand-link" href="HomePage.html" aria-label="">
+          <img id="footer-logo" src="../Images/logo-white.png" alt="" width="168" height="42">
+        </a>
+        <p id="footer-blurb"></p>
+        <div class="social-links" id="social-links"></div>
+      </div>
+      <div class="footer-col">
+        <h3 id="footer-services-title"></h3>
+        <ul id="footer-services-list"></ul>
+      </div>
+      <div class="footer-col">
+        <h3 id="footer-valley-title"></h3>
+        <ul id="footer-valley-list"></ul>
+      </div>
+      <div class="footer-col">
+        <h3 id="footer-policies-title"></h3>
+        <ul id="footer-policies-list"></ul>
+      </div>
+      <div class="footer-contact" id="footer-contact">
+        <h3 id="footer-contact-title"></h3>
+        <a id="footer-email" href="#" dir="ltr"></a>
+        <a id="footer-phone" href="#" dir="ltr"></a>
+      </div>
+    </div>
+    <div class="footer-bottom" id="footer-copyright"></div>
+  </footer>
+
+  <script src="../JS/booking.js" defer></script>
+</body>
+</html>

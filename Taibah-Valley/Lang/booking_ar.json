@@ -1,0 +1,124 @@
+{
+  "lang": "ar",
+  "dir": "rtl",
+  "site": {
+    "name": "وادي طيبة",
+    "url": "https://taibahvalley.com.sa/"
+  },
+  "meta": {
+    "title": "احجز الآن | وادي طيبة",
+    "description": "احجز مساحات العمل وجادة الابتكار وقاعات العمل في وادي طيبة، مع فترات صباحية ومسائية وخطوات حجز واضحة.",
+    "keywords": "وادي طيبة, احجز الآن, قاعات عمل, مساحات العمل, جادة الابتكار, المدينة المنورة",
+    "canonical": "https://taibahvalley.com.sa/booking/",
+    "locale": "ar_SA"
+  },
+  "labels": {
+    "skipToContent": "تخطي إلى المحتوى",
+    "siteHome": "الانتقال إلى الصفحة الرئيسية لوادي طيبة",
+    "logoAlt": "شعار وادي طيبة",
+    "primaryNavigation": "التنقل الرئيسي",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "switchLanguage": "تغيير اللغة",
+    "langPill": "English",
+    "toggleLight": "تفعيل الوضع الفاتح",
+    "toggleDark": "تفعيل الوضع الداكن",
+    "contentError": "تعذر تحميل محتوى الصفحة."
+  },
+  "actions": {
+    "login": "تسجيل الدخول",
+    "contact": "تواصل معنا"
+  },
+  "nav": [
+    { "label": "خدمات الوادي", "href": "HomePage.html#services" },
+    { "label": "الأكاديمية", "href": "HomePage.html#academy" },
+    { "label": "مركز الابتكار", "href": "innovation.html" },
+    { "label": "الأخبار والفعاليات", "href": "HomePage.html#news" },
+    { "label": "المدونة", "href": "HomePage.html#blog" },
+    { "label": "انضم إلينا", "href": "join-us.html" },
+    { "label": "أعمالنا", "href": "HomePage.html#projects" },
+    { "label": "المتجر", "href": "HomePage.html#store" },
+    { "label": "من نحن", "href": "HomePage.html#about" }
+  ],
+  "hero": {
+    "kicker": "احجز الآن",
+    "title": "مساحات مرنة لأفكار تنمو",
+    "description": "اختر المساحة المناسبة لتجربتك في وادي طيبة، من مساحات العمل إلى جادة الابتكار وقاعات العمل، ثم أكمل طلب الحجز عبر المنصة الرسمية.",
+    "cta": "انتقل إلى نموذج الحجز",
+    "imageAlt": "مساحة عمل في وادي طيبة"
+  },
+  "options": {
+    "kicker": "خيارات الحجز",
+    "title": "اختر المساحة المناسبة",
+    "description": "كل بطاقة تنقلك مباشرة إلى نموذج الحجز الرسمي. راجع الفترات المتاحة واختر الوقت الأنسب قبل إتمام الطلب.",
+    "action": "احجز الآن",
+    "items": [
+      {
+        "title": "مساحات العمل",
+        "description": "مساحات مهيأة للعمل الفردي والجماعي والاجتماعات السريعة داخل بيئة ابتكارية.",
+        "icon": "workspace",
+        "ariaLabel": "حجز مساحات العمل عبر نموذج الحجز الرسمي",
+        "times": [
+          { "label": "الفترة الصباحية", "value": "8:00 ص - 15:00 م" },
+          { "label": "الفترة المسائية", "value": "14:00 م - 21:00 م" }
+        ]
+      },
+      {
+        "title": "جادة الابتكار",
+        "description": "مساحة مناسبة للقاءات الابتكارية والعروض والتجارب التي تحتاج حضورًا مرنًا.",
+        "icon": "avenue",
+        "ariaLabel": "حجز جادة الابتكار عبر نموذج الحجز الرسمي",
+        "times": [
+          { "label": "الفترة الصباحية", "value": "8:00 ص - 15:00 م" },
+          { "label": "الفترة المسائية", "value": "14:00 م - 21:00 م" }
+        ]
+      },
+      {
+        "title": "قاعات العمل",
+        "description": "قاعات مخصصة للاجتماعات وورش العمل والأنشطة التي تتطلب تجهيزًا منظمًا.",
+        "icon": "halls",
+        "ariaLabel": "حجز قاعات العمل عبر نموذج الحجز الرسمي",
+        "times": [
+          { "label": "الفترة الصباحية", "value": "8:00 ص - 15:00 م" },
+          { "label": "الفترة المسائية", "value": "14:00 م - 21:00 م" }
+        ]
+      }
+    ]
+  },
+  "note": {
+    "title": "تنبيه مهم",
+    "body": "لتأكيد حجزك، يتوجب إرسال طلب الحجز قبل الموعد بثلاثة أيام على الأقل."
+  },
+  "footer": {
+    "blurb": "مركز الابتكار في المدينة المنورة، يدعم الشركات الناشئة والبحث والاستثمار والتحول الرقمي.",
+    "servicesTitle": "الخدمات",
+    "valleyTitle": "الوادي",
+    "policiesTitle": "السياسات",
+    "contactTitle": "تواصل",
+    "services": [
+      { "label": "خدمات البلوكتشين", "href": "HomePage.html#services" },
+      { "label": "خدمات الذكاء الاصطناعي", "href": "HomePage.html#services" },
+      { "label": "خدمات الواقع الممتد", "href": "HomePage.html#services" },
+      { "label": "خدمات إنترنت الأشياء", "href": "HomePage.html#services" }
+    ],
+    "valley": [
+      { "label": "عن الوادي", "href": "HomePage.html#about" },
+      { "label": "مركز الابتكار", "href": "innovation.html" },
+      { "label": "الأكاديمية", "href": "HomePage.html#academy" },
+      { "label": "الأخبار", "href": "HomePage.html#news" }
+    ],
+    "policies": [
+      { "label": "سياسة الخصوصية", "href": "#" },
+      { "label": "سياسة الاستخدام", "href": "#" }
+    ],
+    "social": [
+      { "label": "وادي طيبة على منصة إكس", "href": "https://twitter.com/TaibahValley", "icon": "x" },
+      { "label": "وادي طيبة على لينكدإن", "href": "https://www.linkedin.com/company/taibahvalley", "icon": "linkedin" },
+      { "label": "وادي طيبة على إنستغرام", "href": "https://www.instagram.com/taibahvalley/", "icon": "instagram" },
+      { "label": "وادي طيبة على يوتيوب", "href": "https://www.youtube.com/channel/UCkuzLmaLDHSCVIvfvR09JUw?view_as=subscriber", "icon": "youtube" }
+    ],
+    "email": "info@taibahvalley.com.sa",
+    "phone": "+966 14 861 8888",
+    "copyright": "© 2026 وادي طيبة. جميع الحقوق محفوظة."
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "lang": "en",
+  "dir": "ltr",
+  "site": {
+    "name": "Taibah Valley",
+    "url": "https://taibahvalley.com.sa/"
+  },
+  "meta": {
+    "title": "Book Now | Taibah Valley",
+    "description": "Book workspaces, Innovation Avenue, and work halls at Taibah Valley with clear morning and evening booking periods.",
+    "keywords": "Taibah Valley, book now, work halls, workspaces, Innovation Avenue, Madinah",
+    "canonical": "https://taibahvalley.com.sa/booking/",
+    "locale": "en_US"
+  },
+  "labels": {
+    "skipToContent": "Skip to content",
+    "siteHome": "Go to Taibah Valley home page",
+    "logoAlt": "Taibah Valley logo",
+    "primaryNavigation": "Primary navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language",
+    "langPill": "العربية",
+    "toggleLight": "Switch to light theme",
+    "toggleDark": "Switch to dark theme",
+    "contentError": "Page content could not be loaded."
+  },
+  "actions": {
+    "login": "Log in",
+    "contact": "Contact us"
+  },
+  "nav": [
+    { "label": "Valley Services", "href": "HomePage.html#services" },
+    { "label": "The Academy", "href": "HomePage.html#academy" },
+    { "label": "Innovation Hub", "href": "innovation.html" },
+    { "label": "News and Events", "href": "HomePage.html#news" },
+    { "label": "Blog", "href": "HomePage.html#blog" },
+    { "label": "Join Us", "href": "join-us.html" },
+    { "label": "Our Projects", "href": "HomePage.html#projects" },
+    { "label": "Store", "href": "HomePage.html#store" },
+    { "label": "About Us", "href": "HomePage.html#about" }
+  ],
+  "hero": {
+    "kicker": "Book now",
+    "title": "Flexible spaces for ideas in motion",
+    "description": "Choose the right space for your experience at Taibah Valley, from workspaces to Innovation Avenue and work halls, then complete your request through the official booking platform.",
+    "cta": "Go to booking form",
+    "imageAlt": "Workspace at Taibah Valley"
+  },
+  "options": {
+    "kicker": "Booking options",
+    "title": "Choose the right space",
+    "description": "Each card takes visitors directly to the official booking form. Review the available periods and choose the most suitable time before submitting.",
+    "action": "Book now",
+    "items": [
+      {
+        "title": "Workspaces",
+        "description": "Prepared spaces for individual work, group collaboration, and quick meetings inside an innovation-focused environment.",
+        "icon": "workspace",
+        "ariaLabel": "Book workspaces through the official booking form",
+        "times": [
+          { "label": "Morning period", "value": "8:00 AM - 3:00 PM" },
+          { "label": "Evening period", "value": "2:00 PM - 9:00 PM" }
+        ]
+      },
+      {
+        "title": "Innovation Avenue",
+        "description": "A suitable space for innovation meetups, showcases, and experiences that need flexible attendance.",
+        "icon": "avenue",
+        "ariaLabel": "Book Innovation Avenue through the official booking form",
+        "times": [
+          { "label": "Morning period", "value": "8:00 AM - 3:00 PM" },
+          { "label": "Evening period", "value": "2:00 PM - 9:00 PM" }
+        ]
+      },
+      {
+        "title": "Work Halls",
+        "description": "Dedicated halls for meetings, workshops, and activities that need an organized setup.",
+        "icon": "halls",
+        "ariaLabel": "Book work halls through the official booking form",
+        "times": [
+          { "label": "Morning period", "value": "8:00 AM - 3:00 PM" },
+          { "label": "Evening period", "value": "2:00 PM - 9:00 PM" }
+        ]
+      }
+    ]
+  },
+  "note": {
+    "title": "Important note",
+    "body": "To confirm your booking, the booking request must be submitted at least three days before the scheduled date."
+  },
+  "footer": {
+    "blurb": "Madinah's innovation hub, supporting startups, research, investment, and digital transformation.",
+    "servicesTitle": "Services",
+    "valleyTitle": "Valley",
+    "policiesTitle": "Policies",
+    "contactTitle": "Contact",
+    "services": [
+      { "label": "Blockchain Services", "href": "HomePage.html#services" },
+      { "label": "AI Services", "href": "HomePage.html#services" },
+      { "label": "AR/VR Services", "href": "HomePage.html#services" },
+      { "label": "IoT Services", "href": "HomePage.html#services" }
+    ],
+    "valley": [
+      { "label": "About", "href": "HomePage.html#about" },
+      { "label": "Innovation Hub", "href": "innovation.html" },
+      { "label": "The Academy", "href": "HomePage.html#academy" },
+      { "label": "News", "href": "HomePage.html#news" }
+    ],
+    "policies": [
+      { "label": "Privacy Policy", "href": "#" },
+      { "label": "Terms of Use", "href": "#" }
+    ],
+    "social": [
+      { "label": "Taibah Valley on X", "href": "https://twitter.com/TaibahValley", "icon": "x" },
+      { "label": "Taibah Valley on LinkedIn", "href": "https://www.linkedin.com/company/taibahvalley", "icon": "linkedin" },
+      { "label": "Taibah Valley on Instagram", "href": "https://www.instagram.com/taibahvalley/", "icon": "instagram" },
+      { "label": "Taibah Valley on YouTube", "href": "https://www.youtube.com/channel/UCkuzLmaLDHSCVIvfvR09JUw?view_as=subscriber", "icon": "youtube" }
+    ],
+    "email": "info@taibahvalley.com.sa",
+    "phone": "+966 14 861 8888",
+    "copyright": "© 2026 Taibah Valley. All rights reserved."
+  }
+}
