@@ -1,0 +1,45 @@
+{
+    "lang": "en",
+    "dir": "ltr",
+    "meta": {
+        "title": "Join Us | Taibah Valley",
+        "description": "Choose your path and start your journey with us today, whether as a trainee or a team expert."
+    },
+    "header": {
+        "menuLabel": "Menu",
+        "langPill": "عربي / EN",
+        "login": "Log in",
+        "contact": "Contact us",
+        "nav": ["Valley Services", "The Academy", "Innovation Hub", "News and Event", "Blog", "Join To Us", "Our Projects", "Store", "About Us"]
+    },
+    "join": {
+        "title": "Join Us",
+        "sub": "Whether you want to enhance your skills as a trainee or share your expertise by applying for available job opportunities, choose your path and start your journey with us today.",
+        "choices": [{
+                "name": "Academy & Training Programs",
+                "desc": "Register as a trainee in our advanced bootcamps and educational paths to empower your skills in deep-tech and AI.",
+                "btnText": "Apply as Trainee →",
+                "link": "#academy-apply"
+            },
+            {
+                "name": "Careers & Opportunities Portal",
+                "desc": "Join Taibah Valley team of experts and contribute to driving digital transformation and creating innovative investment opportunities.",
+                "btnText": "Apply for a Job →",
+                "link": "#job-apply"
+            }
+        ]
+    },
+    "footer": {
+        "blurb": "Madinah's innovation hub — supporting startups, research, investment and digital transformation. Taibah University, Building 132.",
+        "servicesTitle": "Services",
+        "valleyTitle": "Valley",
+        "policiesTitle": "Policies",
+        "contactTitle": "Contact",
+        "footerLabs": ["Blockchain Lab", "IoT Lab", "Innovation Hub", "AR/VR Lab", "AI Lab"],
+        "footerValley": ["About", "The Academy", "News", "Partners"],
+        "footerPolicies": ["Privacy Policy", "Terms of Use"],
+        "email": "info@taibahvalley.com.sa",
+        "phone": "+966 14 861 8888",
+        "copyright": "© 2026 Taibah Valley. All rights reserved."
+    }
+}
