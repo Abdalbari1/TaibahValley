@@ -1,0 +1,46 @@
+{
+    "header": {
+        "menuLabel": "Menu",
+        "langPill": "عربي",
+        "login": "Log in",
+        "contact": "Contact us",
+        "nav": [
+            { "name": "Valley Services", "url": "#" },
+            { "name": "The Academy", "url": "#" },
+            { "name": "Innovation Hub", "url": "#" },
+            { "name": "News and Event", "url": "#" },
+            { "name": "Blog", "url": "#" },
+            { "name": "Join To Us", "url": "join-us.html" },
+            { "name": "Our Projects", "url": "#" },
+            { "name": "Store", "url": "#" },
+            { "name": "About Us", "url": "#" }
+        ]
+    },
+    "footer": {
+        "blurb": "Madinah's innovation hub — supporting startups, research, investment and digital transformation. Taibah University, Building 132.",
+        "servicesTitle": "Services",
+        "valleyTitle": "Valley",
+        "policiesTitle": "Policies",
+        "contactTitle": "Contact",
+        "footerLabs": [
+            { "name": "Blockchain Lab", "url": "#" },
+            { "name": "IoT Lab", "url": "#" },
+            { "name": "Innovation Hub", "url": "#" },
+            { "name": "AR/VR Lab", "url": "#" },
+            { "name": "AI Lab", "url": "#" }
+        ],
+        "footerValley": [
+            { "name": "About", "url": "#" },
+            { "name": "The Academy", "url": "#" },
+            { "name": "News", "url": "#" },
+            { "name": "Partners", "url": "#" }
+        ],
+        "footerPolicies": [
+            { "name": "Privacy Policy", "url": "#" },
+            { "name": "Terms of Use", "url": "#" }
+        ],
+        "email": "info@taibahvalley.com.sa",
+        "phone": "+966 14 861 8888",
+        "copyright": "© 2026 Taibah Valley. All rights reserved."
+    }
+}
